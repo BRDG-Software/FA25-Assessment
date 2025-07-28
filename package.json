@@ -1,0 +1,45 @@
+{
+  "name": "nike-fa25",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "d3-ease": "^3.0.1",
+    "framer-motion": "^12.23.6",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.1",
+    "motion": "^12.23.6",
+    "next": "15.3.5",
+    "nextjs-google-analytics": "^2.3.7",
+    "react": "^19.0.0",
+    "react-circular-progressbar": "^2.2.0",
+    "react-dom": "^19.0.0",
+    "react-icons": "^5.5.0",
+    "react-move": "^6.5.0",
+    "react-to-print": "^3.1.1",
+    "react-type-animation": "^3.2.0",
+    "tw-merge": "^0.0.1-alpha.3",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/d3-ease": "^3.0.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/ws": "^8.18.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.5",
+    "husky": "^9.1.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
