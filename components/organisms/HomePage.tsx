@@ -30,9 +30,6 @@ export default function HomePage() {
     selectedOption,
     selectedHomePageTab,
     setSelectedHomePageTab,
-    currentScreen,
-    showSplash,
-    setSelectedTab,
   } = useMainContext();
 
   // =====================REFS==================
@@ -50,7 +47,7 @@ export default function HomePage() {
 
   useEffect(() => {
     setSelectedQuestion(questions[0]);
-  }, []);
+  }, [setSelectedQuestion]);
 
   // =====================HANDLES==================
 

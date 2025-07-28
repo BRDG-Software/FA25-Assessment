@@ -9,6 +9,7 @@ import { layoutEnum, shoeEnum } from "@/utils/types";
 import Text from "./Text";
 import Slip from "../organisms/Slip";
 import { useMainContext } from "@/providers/MainContext";
+import { homePageTabsEnum } from "../organisms/HomePage";
 
 type propsType = {
   selectedShoe: string[];
@@ -30,15 +31,20 @@ export default function AnimatedText({
   const [hideText2, setHideText2] = useState<boolean>(false);
   const [animationEnded, setAnimationEnded] = useState<boolean>(false);
 
-  const { setSelectedTab } = useMainContext();
-
   //================== hooks ==================
-  // const { handlePrint, printSlipRef, currentScreen } = useMainContext();
+  const { setSelectedTab, currentScreen } = useMainContext();
 
   //================== Animation durations ==================
   const calibrationDuration = calibrationSteps.length * 1200; // 1.2s per step
   const runStepDuration = 1200;
   const runStepsArray = Object.values(shoeEnum);
+
+  const {
+    setSelectedHomePageTab,
+    setCurrentScreen,
+    setHighlightedIdx,
+    setSelectedOption,
+  } = useMainContext();
 
   useEffect(() => {
     if (phase === "calibration") {
@@ -81,8 +87,32 @@ export default function AnimatedText({
         clearTimeout(typeAnimationEndedTimer);
       };
     }
-  }, [phase]);
+  }, [phase, calibrationDuration, runStepsArray]);
 
+  useEffect(() => {
+    //eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let printTimeout: any;
+    if (showPrintButton) {
+      printTimeout = setTimeout(() => {
+        setSelectedTab(layoutEnum.landingPage);
+        setSelectedTab(layoutEnum.landingPage);
+        setSelectedHomePageTab(homePageTabsEnum.questionareTab);
+        setHighlightedIdx(0);
+        setSelectedOption(null);
+        setCurrentScreen(0);
+      }, 45000);
+    }
+    return () => {
+      clearTimeout(printTimeout);
+    };
+  }, [
+    showPrintButton,
+    setSelectedTab,
+    setSelectedHomePageTab,
+    setHighlightedIdx,
+    setSelectedOption,
+    setCurrentScreen,
+  ]);
   // console.log({ hasReturnedFromPrint });
   // useEffect(() => {
   //   const handleFocus = () => {
@@ -100,13 +130,13 @@ export default function AnimatedText({
   // Add this new useEffect
 
   // console.log({ showSplash });
-  useEffect(() => {
-    if (showPrintButton) {
-      setTimeout(() => {
-        setSelectedTab(layoutEnum.landingPage);
-      }, 45000);
-    }
-  }, [showPrintButton]);
+  // useEffect(() => {
+  //   if (showPrintButton) {
+  //     setTimeout(() => {
+  //       setSelectedTab(layoutEnum.landingPage);
+  //     }, 45000);
+  //   }
+  // }, [showPrintButton]);
 
   const unSelectedShoe = useMemo(() => {
     const unSelected = runStepsArray.filter(

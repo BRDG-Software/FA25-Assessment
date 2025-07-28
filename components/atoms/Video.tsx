@@ -32,7 +32,7 @@ const Video = ({ height, width, values }: videoPropsType) => {
     });
 
     return videos;
-  }, [values, currentVideoIndex]);
+  }, [values]);
 
   useEffect(() => {
     const videoElement = videoRef.current;

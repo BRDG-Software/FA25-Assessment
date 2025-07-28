@@ -86,13 +86,46 @@ export default function MainContextProvider({
 
   const [backHandler, setBackHandler] = useState<boolean>(false);
   const visitedRef = useRef<number>(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
   const [selectedTab, setSelectedTab] = useState<layoutEnum>(
     layoutEnum.landingPage
   );
 
+  // =================Socket Initialization====================
+
+  const wsRef = useRef<WebSocket | null>(null);
+  const connectionCounter = useRef<number>(0);
+
   const [selectedHomePageTab, setSelectedHomePageTab] =
     useState<homePageTabsEnum>(homePageTabsEnum.questionareTab);
+
+  const handleReset = () => {
+    setSelectedTab(layoutEnum.landingPage);
+    setShowSplash(false);
+    setCurrentScreen(0);
+    setHighlightedIdx(0);
+    setSelectedOption(null);
+    setSelectedQuestion(questions[0]);
+    setSelectedHomePageTab(homePageTabsEnum.questionareTab);
+  };
+
+  // Modify the resetTimer function to accept any Event type
+  const resetTimer = (event?: Event) => {
+    if (selectedTab === layoutEnum.landingPage) return;
+
+    // Check if it's a keyboard event
+    if (event instanceof KeyboardEvent) {
+      if (["ArrowLeft", "ArrowRight", "1", "2", "3"].includes(event.key)) {
+        return;
+      }
+    }
+
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      handleReset();
+    }, 40000);
+  };
   // Keep the ref in sync with the state
   useEffect(() => {
     currentScreenRef.current = currentScreen;
@@ -100,42 +133,87 @@ export default function MainContextProvider({
 
   useEffect(() => {
     if (showSplash) {
+      console.log("showSplash fired");
       const timer = setTimeout(() => {
-        setShowSplash(false);
-        setCurrentScreen(0);
-        setSelectedTab(layoutEnum.landingPage);
-        setSelectedHomePageTab(homePageTabsEnum.questionareTab);
-        setHighlightedIdx(0);
-        setSelectedOption(null);
+        handleReset();
       }, 2000);
       return () => clearTimeout(timer);
     }
   }, [showSplash, setCurrentScreen]);
 
+  // resets timer if screen is idle for 30 seconds
+  useEffect(() => {
+    const events = ["mousemove", "click", "scroll", "touchstart", "mousedown"];
+
+    // Handle keydown separately to check for specific keys
+    const handleKeydown = (e: KeyboardEvent) => {
+      resetTimer(e);
+    };
+
+    // Add regular event listeners
+    events.forEach((event) => document.addEventListener(event, resetTimer));
+    // Add keydown with special handling
+    document.addEventListener("keydown", handleKeydown);
+
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN) {
+      wsRef.current.addEventListener("message", resetTimer);
+    }
+
+    resetTimer();
+
+    return () => {
+      events.forEach((event) =>
+        document.removeEventListener(event, resetTimer)
+      );
+      document.removeEventListener("keydown", handleKeydown);
+      if (timerRef.current) clearTimeout(timerRef.current);
+      // Don't close the WebSocket connection here
+    };
+  }, [selectedTab]);
+
   useEffect(() => {
     if (selectedHomePageTab === homePageTabsEnum.animatedText) {
+      console.log("is ref fired");
       setCurrentScreen(3);
       visitedRef.current = 3;
     }
   }, [selectedHomePageTab, visitedRef]);
 
-  console.log({ selectedHomePageTab, currentScreen, showSplash });
-  // =================Socket Initialization====================
+  console.log({ selectedHomePageTab, currentScreen, showSplash, selectedTab });
 
+  // Create a separate effect for WebSocket initialization with no dependencies
   useEffect(() => {
-    const ws = new WebSocket(process.env.NEXT_PUBLIC_SOCKET_URL as string);
-    //   socketRef.current = ws;
-    console.log({ current: visitedRef.current });
-    ws.onopen = () => {
-      console.log("Connected to WebSocket");
-      ws.send("Hello, WebSocket!");
+    if (!wsRef.current) {
+      connectionCounter.current++;
+      wsRef.current = new WebSocket(
+        process.env.NEXT_PUBLIC_SOCKET_URL as string
+      );
+      wsRef.current.onopen = () => {
+        console.log(
+          `WebSocket Connection #${connectionCounter.current} established`
+        );
+        wsRef.current?.send("Hello, WebSocket!");
+      };
+    }
+
+    return () => {
+      if (wsRef.current) {
+        wsRef.current.close();
+        wsRef.current = null;
+      }
     };
+  }, []); // Empty dependency array - only runs once on mount
+
+  // Separate effect for handling WebSocket events
+  useEffect(() => {
+    const ws = wsRef.current;
+    if (!ws) return;
 
     const handleStartScreen = (event: MessageEvent) => {
       try {
         const data: TSocketPayload = JSON.parse(event.data);
 
-        // Place this block at the top
+        // currentScreenRef.current is the instruction screen
         if (currentScreenRef.current === 2 && visitedRef.current === 2) {
           if (
             data?.event === SocketEventEnum.NEXT_BUTTON ||
@@ -143,8 +221,8 @@ export default function MainContextProvider({
             data?.event === SocketEventEnum.KNOB
           ) {
             setCurrentScreen(0);
-            // visitedRef.current = 0;
             setSelectedTab(layoutEnum.landingPage);
+            // visitedRef.current = 0;
             return;
           }
         }
@@ -161,7 +239,17 @@ export default function MainContextProvider({
 
           if (currentScreen === 1) {
             //this means i am on the questionaire screen
-            setHighlightedIdx(data.value - 1); // the value it will listen is between 1-3 so that means it will be choosing between any of the 3 values, but we are storing, 0,1,2 respectively for the answers
+            const value = data.value - 1;
+            setHighlightedIdx(value); // the value it will listen is between 1-3 so that means it will be choosing between any of the 3 values, but we are storing, 0,1,2 respectively for the answers
+
+            // const meterNum = value + 1;
+
+            // ws.send(
+            //   JSON.stringify({
+            //     event: `meter${meterNum}`,
+            //     value: 1,
+            //   })
+            // );
           }
         }
 
@@ -194,11 +282,12 @@ export default function MainContextProvider({
 
           if (currentScreen === 1) {
             questionaireRefs[highlightedIdx].current?.click();
+            const value = highlightedIdx + 1;
+            ws.send(JSON.stringify({ event: `meter${value}`, value: 1 }));
           }
-          console.log({ currentScreen, ref: currentScreenRef.current });
+
           if (currentScreen === 3) {
             handlePrint();
-
             console.log("printing");
           }
         }
@@ -206,8 +295,6 @@ export default function MainContextProvider({
         console.log("Failed to parse event.data", event.data, err);
       }
     };
-
-    ws.onmessage = handleStartScreen;
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (ws.readyState !== WebSocket.OPEN) return;
@@ -222,6 +309,7 @@ export default function MainContextProvider({
         );
       }
       if (e.key === "1") {
+        console.log("in 1 body");
         ws.send(JSON.stringify({ event: SocketEventEnum.KNOB, value: 1 }));
       }
       if (e.key === "2") {
@@ -232,14 +320,13 @@ export default function MainContextProvider({
       }
     };
 
+    ws.onmessage = handleStartScreen;
     window.addEventListener("keydown", handleKeyDown);
+
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
       ws.onmessage = null;
-      ws.close();
     };
-    // Only run once on mount
-    // eslint-disable-next-line
   }, [
     highlightedIdx,
     currentScreen,

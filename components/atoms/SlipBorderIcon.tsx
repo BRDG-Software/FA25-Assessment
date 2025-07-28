@@ -11,6 +11,7 @@ function SlipBorderIcon({ className }: Props) {
   return (
     <div className={cn("flex flex-col", className)}>
       {Array.from({ length: repeatCount }).map((_, idx) => (
+        //eslint-disable-next-line @next/next/no-img-element
         <img
           key={idx}
           src={

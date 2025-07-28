@@ -16,15 +16,12 @@ type propsType = {
 };
 
 const LandingPage = ({ setSelectedTab }: propsType) => {
-  const [splashEffect, setSplashEffect] = useState(false);
   const {
     animatingIdx,
-    focusedIdx,
     highlightedIdx,
     instructionsBtnRef,
     setAnimatingIdx,
     startBtnRef,
-    currentScreen,
   } = useMainContext();
 
   // Remove the animation class after the animation duration
@@ -33,7 +30,7 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
       const timeout = setTimeout(() => setAnimatingIdx(null), 300); // 300ms = animation duration
       return () => clearTimeout(timeout);
     }
-  }, [animatingIdx]);
+  }, [animatingIdx, setAnimatingIdx]);
 
   const handleTabChange = () => {
     // setSplashEffect(true);

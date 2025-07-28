@@ -1,8 +1,6 @@
 import React, { useRef } from "react";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-import Slip from "../organisms/Slip";
-// import PrintableContent from "./PrintableContent";
 
 const GeneratePDF = () => {
   const printRef = useRef<HTMLDivElement>(null);

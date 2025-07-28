@@ -43,10 +43,14 @@ const QuestionareSection = ({
   };
 
   useEffect(() => {
-    setTimeout(() => {
+    const questionareTimer = setTimeout(() => {
       setSelectedTab(layoutEnum.landingPage);
     }, 90000);
-  }, []);
+
+    return () => {
+      clearTimeout(questionareTimer);
+    };
+  }, [setSelectedTab]);
 
   return (
     <motion.div

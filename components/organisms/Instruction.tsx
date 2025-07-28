@@ -4,20 +4,23 @@ import Text from "../atoms/Text";
 import { GoPlus } from "react-icons/go";
 import Divider from "../atoms/Divider";
 import DotComponent from "../atoms/DotComponent";
-import { layoutEnum } from "@/utils/types";
 import { useMainContext } from "@/providers/MainContext";
+import { layoutEnum } from "@/utils/types";
 
 const Instruction = () => {
   const { selectedTab, setSelectedTab } = useMainContext();
 
   useEffect(() => {
-    setTimeout(() => {
+    const instructionTimeOut = setTimeout(() => {
       setSelectedTab(layoutEnum.landingPage);
     }, 30000);
-  }, []);
+    return () => {
+      clearTimeout(instructionTimeOut);
+    };
+  }, [setSelectedTab]);
 
   return (
-    <div className="p-6 w-[92%] flex flex-col items-center  h-full m-auto">
+    <div className="p-6 w-[92%] flex flex-col items-center h-full m-auto">
       <div className="flex justify-between items-center h-full w-full ">
         <div className="flex items-center gap-4 ">
           <GoPlus size={50} className=" text-white" />
