@@ -4,9 +4,6 @@ import { cn } from "@/utils/helper";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
 import LogoLight from "../../assets/images/runlogolight.svg";
-import { IoArrowBackCircle } from "react-icons/io5";
-import { useMainContext } from "@/providers/MainContext";
-import { homePageTabsEnum } from "../organisms/HomePage";
 
 interface propsType {
   children: React.ReactNode;
@@ -15,8 +12,6 @@ interface propsType {
 }
 
 const AppLayout = ({ children, className, Logo = LogoLight }: propsType) => {
-  const { handleBack, selectedHomePageTab } = useMainContext();
-
   return (
     <div className="relative m-0 p-0 ">
       <video

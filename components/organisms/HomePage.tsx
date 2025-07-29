@@ -4,7 +4,7 @@ import Text from "../atoms/Text";
 import { useEffect, useRef, useState } from "react";
 import ChartSection from "./ChartSection";
 import { questions } from "@/utils/data";
-import { layoutEnum, shoeEnum } from "@/utils/types";
+import { homePageTabsEnum, layoutEnum, shoeEnum } from "@/utils/types";
 import Divider from "../atoms/Divider";
 import DotComponent from "../atoms/DotComponent";
 import QuestionareSection from "./QuestionareSection";
@@ -12,10 +12,6 @@ import AnimatedText from "../atoms/AnimatedText";
 import { findIndex, maximumValue } from "@/utils/helper";
 import { useMainContext } from "@/providers/MainContext";
 
-export enum homePageTabsEnum {
-  questionareTab = "QuestionareTab",
-  animatedText = "AnimatedText",
-}
 
 export default function HomePage() {
   // ==================STATES==================
@@ -69,7 +65,6 @@ export default function HomePage() {
     Array(questions.length).fill(null)
   );
 
-  console.log({ answers });
   const [showResult, setShowResult] = useState(false);
 
   const handleSelect = (qIdx: number, oIdx: number, quesId: string) => {
@@ -97,6 +92,7 @@ export default function HomePage() {
     Pegasus: 0,
     Vomero: 0,
   };
+
   answers.forEach((oIdx, qIdx) => {
     if (oIdx !== null) {
       const shoe = questions[qIdx].options[oIdx].shoe as shoeEnum;

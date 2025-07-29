@@ -24,7 +24,7 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
     ref
   ) => {
     return (
-      <motion.button
+      <motion.div
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.8 }}
         style={box}
@@ -42,7 +42,7 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
           {title}
           {guidetext && <span className="text-sm">Press Enter to Select</span>}
         </button>
-      </motion.button>
+      </motion.div>
     );
   }
 );

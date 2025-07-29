@@ -1,4 +1,4 @@
-import { homePageTabsEnum } from "@/components/organisms/HomePage";
+
 import { Dispatch, RefObject, SetStateAction } from "react";
 import { UseReactToPrintFn } from "react-to-print";
 
@@ -13,6 +13,11 @@ export const enum SocketEventEnum {
   BACK_BUTTON = "back_button",
   NEXT_BUTTON = "next_button",
   KNOB = "knob",
+  PRINTING = "printing",
+  SCREEN_NUMBER = "screen_number",
+  METER1 = "meter_1",
+  METER2 = "meter_2",
+  METER3 = "meter_3",
 }
 
 export enum layoutEnum {
@@ -20,6 +25,12 @@ export enum layoutEnum {
   appLayout = "AppLayout",
   instructionPage = "InstructionPage",
 }
+
+export enum homePageTabsEnum {
+  questionareTab = "QuestionareTab",
+  animatedText = "AnimatedText",
+}
+
 // =========================Types=====================
 
 export type optionTypes = {
@@ -94,4 +105,6 @@ export interface IMainContext {
 
   showSplash: boolean;
   setShowSplash: Dispatch<SetStateAction<boolean>>;
+
+  wsRef: React.RefObject<WebSocket | null>;
 }

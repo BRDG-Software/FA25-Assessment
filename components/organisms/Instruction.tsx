@@ -10,14 +10,14 @@ import { layoutEnum } from "@/utils/types";
 const Instruction = () => {
   const { selectedTab, setSelectedTab } = useMainContext();
 
-  useEffect(() => {
-    const instructionTimeOut = setTimeout(() => {
-      setSelectedTab(layoutEnum.landingPage);
-    }, 30000);
-    return () => {
-      clearTimeout(instructionTimeOut);
-    };
-  }, [setSelectedTab]);
+  // useEffect(() => {
+  //   const instructionTimeOut = setTimeout(() => {
+  //     setSelectedTab(layoutEnum.landingPage);
+  //   }, 30000);
+  //   return () => {
+  //     clearTimeout(instructionTimeOut);
+  //   };
+  // }, [setSelectedTab]);
 
   return (
     <div className="p-6 w-[92%] flex flex-col items-center h-full m-auto">

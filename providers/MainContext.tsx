@@ -1,11 +1,11 @@
 "use client";
-import { homePageTabsEnum } from "@/components/organisms/HomePage";
-import { questions } from "@/utils/data";
+import { questions, screenMap } from "@/utils/data";
 import { findIndex } from "@/utils/helper";
 import {
   IMainContext,
   SocketEventEnum,
   TSocketPayload,
+  homePageTabsEnum,
   layoutEnum,
   questionsTypes,
 } from "@/utils/types";
@@ -43,12 +43,13 @@ export const MainContext = createContext<IMainContext>({
   handleBack: () => {},
   backHandler: false,
   setBackHandler: () => {},
-  selectedHomePageTab: homePageTabsEnum.questionareTab,
+  selectedHomePageTab: homePageTabsEnum?.questionareTab,
   setSelectedHomePageTab: () => {},
   printSlipRef: {} as RefObject<null>,
   handlePrint: () => {},
   showSplash: false,
   setShowSplash: () => {},
+  wsRef: {} as React.RefObject<WebSocket | null>,
 });
 export const useMainContext = () => useContext(MainContext);
 
@@ -62,7 +63,7 @@ export default function MainContextProvider({
   const [highlightedIdx, setHighlightedIdx] = useState(0);
   const [currentScreen, setCurrentScreen] = useState(0);
   const currentScreenRef = useRef(currentScreen);
-  const socketRef = useRef<WebSocket | null>(null);
+
   const instructionsBtnRef = useRef<HTMLButtonElement>(null);
   const startBtnRef = useRef<HTMLButtonElement>(null);
   const [selectedQuestion, setSelectedQuestion] = useState<questionsTypes>(
@@ -193,6 +194,12 @@ export default function MainContextProvider({
           `WebSocket Connection #${connectionCounter.current} established`
         );
         wsRef.current?.send("Hello, WebSocket!");
+        wsRef.current?.send(
+          JSON.stringify({
+            event: SocketEventEnum.SCREEN_NUMBER,
+            value: 1,
+          })
+        );
       };
     }
 
@@ -203,6 +210,16 @@ export default function MainContextProvider({
       }
     };
   }, []); // Empty dependency array - only runs once on mount
+
+  useEffect(() => {
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN)
+      wsRef.current?.send(
+        JSON.stringify({
+          event: SocketEventEnum.SCREEN_NUMBER,
+          value: screenMap[currentScreen as keyof typeof screenMap],
+        })
+      );
+  }, [currentScreen, wsRef]);
 
   // Separate effect for handling WebSocket events
   useEffect(() => {
@@ -288,6 +305,7 @@ export default function MainContextProvider({
 
           if (currentScreen === 3) {
             handlePrint();
+            wsRef.current?.send(JSON.stringify({ event: "printing" }));
             console.log("printing");
           }
         }
@@ -350,6 +368,7 @@ export default function MainContextProvider({
 
   const values: IMainContext = {
     // socket: socketRef,
+    wsRef,
     setShowSplash,
     showSplash,
     selectedTab,

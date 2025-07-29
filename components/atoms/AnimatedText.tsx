@@ -5,11 +5,10 @@ import { cn } from "@/utils/helper";
 import { TypeAnimation } from "react-type-animation";
 import React, { useEffect, useMemo, useState } from "react";
 import Button from "./Button";
-import { layoutEnum, shoeEnum } from "@/utils/types";
+import { shoeEnum } from "@/utils/types";
 import Text from "./Text";
 import Slip from "../organisms/Slip";
 import { useMainContext } from "@/providers/MainContext";
-import { homePageTabsEnum } from "../organisms/HomePage";
 
 type propsType = {
   selectedShoe: string[];
@@ -19,7 +18,6 @@ type propsType = {
 
 export default function AnimatedText({
   selectedShoe,
-  onPrint,
   progressChartReading,
 }: propsType) {
   const { printSlipRef, handlePrint, showSplash } = useMainContext();
@@ -32,19 +30,12 @@ export default function AnimatedText({
   const [animationEnded, setAnimationEnded] = useState<boolean>(false);
 
   //================== hooks ==================
-  const { setSelectedTab, currentScreen } = useMainContext();
+  // const { handlePrint, printSlipRef, currentScreen } = useMainContext();
 
   //================== Animation durations ==================
   const calibrationDuration = calibrationSteps.length * 1200; // 1.2s per step
   const runStepDuration = 1200;
   const runStepsArray = Object.values(shoeEnum);
-
-  const {
-    setSelectedHomePageTab,
-    setCurrentScreen,
-    setHighlightedIdx,
-    setSelectedOption,
-  } = useMainContext();
 
   useEffect(() => {
     if (phase === "calibration") {
@@ -87,32 +78,8 @@ export default function AnimatedText({
         clearTimeout(typeAnimationEndedTimer);
       };
     }
-  }, [phase, calibrationDuration, runStepsArray]);
+  }, [phase]);
 
-  useEffect(() => {
-    //eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let printTimeout: any;
-    if (showPrintButton) {
-      printTimeout = setTimeout(() => {
-        setSelectedTab(layoutEnum.landingPage);
-        setSelectedTab(layoutEnum.landingPage);
-        setSelectedHomePageTab(homePageTabsEnum.questionareTab);
-        setHighlightedIdx(0);
-        setSelectedOption(null);
-        setCurrentScreen(0);
-      }, 45000);
-    }
-    return () => {
-      clearTimeout(printTimeout);
-    };
-  }, [
-    showPrintButton,
-    setSelectedTab,
-    setSelectedHomePageTab,
-    setHighlightedIdx,
-    setSelectedOption,
-    setCurrentScreen,
-  ]);
   // console.log({ hasReturnedFromPrint });
   // useEffect(() => {
   //   const handleFocus = () => {
