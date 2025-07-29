@@ -1,5 +1,5 @@
 "use client";
-import { questions, screenMap } from "@/utils/data";
+import { questions } from "@/utils/data";
 import { findIndex } from "@/utils/helper";
 import {
   IMainContext,
@@ -9,6 +9,7 @@ import {
   layoutEnum,
   questionsTypes,
 } from "@/utils/types";
+import html2canvas from "html2canvas";
 import {
   createContext,
   RefObject,
@@ -17,7 +18,7 @@ import {
   useRef,
   useState,
 } from "react";
-import { useReactToPrint } from "react-to-print";
+import { saveAs } from "file-saver";
 
 const MAX_HIGHLIGHT_INDEX = 3;
 
@@ -50,8 +51,23 @@ export const MainContext = createContext<IMainContext>({
   showSplash: false,
   setShowSplash: () => {},
   wsRef: {} as React.RefObject<WebSocket | null>,
+
+  answers: [],
+  setAnswers: () => {},
 });
 export const useMainContext = () => useContext(MainContext);
+
+function getMeterFrequencies(answers: (number | null)[]) {
+  const total = answers.length;
+  if (total === 0) return [0, 0, 0];
+
+  const counts = [0, 0, 0];
+  answers.forEach((a) => {
+    if (a === 0 || a === 1 || a === 2) counts[a]++;
+  });
+
+  return counts.map((count) => count / total);
+}
 
 export default function MainContextProvider({
   children,
@@ -62,7 +78,14 @@ export default function MainContextProvider({
   const [animatingIdx, setAnimatingIdx] = useState<number | null>(null);
   const [highlightedIdx, setHighlightedIdx] = useState(0);
   const [currentScreen, setCurrentScreen] = useState(0);
+  const [lastSocketEvent, setLastSocketEvent] = useState<string | null>(null);
+
+  const [answers, setAnswers] = useState<(number | null)[]>(
+    Array(questions.length).fill(null)
+  );
+
   const currentScreenRef = useRef(currentScreen);
+  const [meter1, meter2, meter3] = getMeterFrequencies(answers);
 
   const instructionsBtnRef = useRef<HTMLButtonElement>(null);
   const startBtnRef = useRef<HTMLButtonElement>(null);
@@ -76,14 +99,6 @@ export default function MainContextProvider({
     useRef<HTMLButtonElement>(null)
   );
   const printSlipRef = useRef(null);
-  const handlePrint = useReactToPrint({
-    documentTitle: "",
-    contentRef: printSlipRef,
-    onAfterPrint: () => {
-      setShowSplash(true);
-      setCurrentScreen(0);
-    },
-  });
 
   const [backHandler, setBackHandler] = useState<boolean>(false);
   const visitedRef = useRef<number>(0);
@@ -211,16 +226,6 @@ export default function MainContextProvider({
     };
   }, []); // Empty dependency array - only runs once on mount
 
-  useEffect(() => {
-    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN)
-      wsRef.current?.send(
-        JSON.stringify({
-          event: SocketEventEnum.SCREEN_NUMBER,
-          value: screenMap[currentScreen as keyof typeof screenMap],
-        })
-      );
-  }, [currentScreen, wsRef]);
-
   // Separate effect for handling WebSocket events
   useEffect(() => {
     const ws = wsRef.current;
@@ -239,6 +244,9 @@ export default function MainContextProvider({
           ) {
             setCurrentScreen(0);
             setSelectedTab(layoutEnum.landingPage);
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
+            );
             // visitedRef.current = 0;
             return;
           }
@@ -258,15 +266,6 @@ export default function MainContextProvider({
             //this means i am on the questionaire screen
             const value = data.value - 1;
             setHighlightedIdx(value); // the value it will listen is between 1-3 so that means it will be choosing between any of the 3 values, but we are storing, 0,1,2 respectively for the answers
-
-            // const meterNum = value + 1;
-
-            // ws.send(
-            //   JSON.stringify({
-            //     event: `meter${meterNum}`,
-            //     value: 1,
-            //   })
-            // );
           }
         }
 
@@ -276,7 +275,19 @@ export default function MainContextProvider({
             if (selectedQuestion?.id === "q1") {
               setSelectedTab(layoutEnum.landingPage);
               setCurrentScreen(0);
+              ws?.send(
+                JSON.stringify({
+                  event: SocketEventEnum.SCREEN_NUMBER,
+                  value: 1,
+                })
+              );
             } else {
+              ws?.send(
+                JSON.stringify({
+                  event: SocketEventEnum.SCREEN_NUMBER,
+                  value: findIndex(selectedQuestion?.id) + 1, //findIndex returns current questions so our screens per Q are head from their current index
+                })
+              );
               setSelectedQuestion(
                 questions[findIndex(selectedQuestion.id) - 1]
               );
@@ -285,11 +296,16 @@ export default function MainContextProvider({
         }
 
         if (data?.event === SocketEventEnum.NEXT_BUTTON && data.value === 1) {
+          setLastSocketEvent(SocketEventEnum.NEXT_BUTTON);
           if (currentScreen < 0) return;
           if (currentScreen === 0 && highlightedIdx === 0) {
             setCurrentScreen(1);
             visitedRef.current = 1;
             startBtnRef.current?.click();
+            // sends users screen 2 means user has reached questionaire section question 1
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 2 })
+            );
           } else if (currentScreen === 0 && highlightedIdx === 1) {
             setCurrentScreen(2);
             visitedRef.current = 2;
@@ -299,13 +315,31 @@ export default function MainContextProvider({
 
           if (currentScreen === 1) {
             questionaireRefs[highlightedIdx].current?.click();
-            const value = highlightedIdx + 1;
-            ws.send(JSON.stringify({ event: `meter${value}`, value: 1 }));
+            const qIdx = findIndex(selectedQuestion?.id) + 3;
+            // To send meter1 value:
+            ws.send(JSON.stringify({ event: "meter1", value: meter1 }));
+
+            // To send meter2 value:
+            ws.send(JSON.stringify({ event: "meter2", value: meter2 }));
+
+            // To send meter3 value:
+            ws.send(JSON.stringify({ event: "meter3", value: meter3 }));
+            if (qIdx === 7) return;
+            ws.send(
+              JSON.stringify({
+                event: SocketEventEnum.SCREEN_NUMBER,
+                value: findIndex(selectedQuestion?.id) + 3,
+              })
+            );
           }
 
           if (currentScreen === 3) {
             handlePrint();
-            wsRef.current?.send(JSON.stringify({ event: "printing" }));
+            ws?.send(JSON.stringify({ event: "printing" }));
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
+            );
+
             console.log("printing");
           }
         }
@@ -352,7 +386,41 @@ export default function MainContextProvider({
     startBtnRef,
     instructionsBtnRef,
     visitedRef,
+    meter1,
+    meter2,
+    meter3,
   ]);
+
+  useEffect(() => {
+    if (
+      wsRef.current &&
+      wsRef.current.readyState === WebSocket.OPEN &&
+      currentScreen === 1 &&
+      lastSocketEvent === SocketEventEnum.NEXT_BUTTON
+    ) {
+      wsRef.current.send(JSON.stringify({ event: "meter1", value: meter1 }));
+      wsRef.current.send(JSON.stringify({ event: "meter2", value: meter2 }));
+      wsRef.current.send(JSON.stringify({ event: "meter3", value: meter3 }));
+
+      // Reset the event so it doesn't send again on every answers change
+      setLastSocketEvent(null);
+    }
+  }, [answers, meter1, meter2, meter3, currentScreen, lastSocketEvent]);
+
+  const handlePrint = async () => {
+    const element = document.getElementById("slip-pdf"); // ID of the HTML element containing your component
+    const canvas = await html2canvas(element as HTMLElement);
+    const data = canvas.toDataURL("image/png"); // Capture as PNG first
+
+    // To convert to BMP, you would need a client-side library or send to a server for conversion.
+    // As a direct download, you can offer the PNG:
+    const link = document.createElement("a");
+    link.href = data;
+    link.download = "my-component.png"; // Or send to a server for BMP conversion
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const handleBack = () => {
     setBackHandler(true);
@@ -395,6 +463,9 @@ export default function MainContextProvider({
     setSelectedHomePageTab,
     printSlipRef,
     handlePrint,
+
+    setAnswers,
+    answers,
   };
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 }

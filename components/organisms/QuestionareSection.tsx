@@ -1,4 +1,9 @@
-import { layoutEnum, optionTypes, questionsTypes } from "@/utils/types";
+import {
+  homePageTabsEnum,
+  layoutEnum,
+  optionTypes,
+  questionsTypes,
+} from "@/utils/types";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import Text from "../atoms/Text";
@@ -6,7 +11,6 @@ import { cn, findIndex } from "@/utils/helper";
 import { motion } from "motion/react";
 import { questions } from "@/utils/data";
 import { useMainContext } from "@/providers/MainContext";
-import { homePageTabsEnum } from "./HomePage";
 
 type propsType = {
   handleSelect: (qIdx: number, oIdx: number, quesId: string) => void;

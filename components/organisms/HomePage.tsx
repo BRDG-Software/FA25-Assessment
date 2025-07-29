@@ -12,7 +12,6 @@ import AnimatedText from "../atoms/AnimatedText";
 import { findIndex, maximumValue } from "@/utils/helper";
 import { useMainContext } from "@/providers/MainContext";
 
-
 export default function HomePage() {
   // ==================STATES==================
 
@@ -26,6 +25,8 @@ export default function HomePage() {
     selectedOption,
     selectedHomePageTab,
     setSelectedHomePageTab,
+    answers,
+    setAnswers,
   } = useMainContext();
 
   // =====================REFS==================
@@ -60,10 +61,6 @@ export default function HomePage() {
   // };
 
   //Charts
-
-  const [answers, setAnswers] = useState<(number | null)[]>(
-    Array(questions.length).fill(null)
-  );
 
   const [showResult, setShowResult] = useState(false);
 
@@ -110,6 +107,8 @@ export default function HomePage() {
   };
 
   const progress = Math.round((total / questions.length) * 100);
+
+  console.log({ shoePercent });
 
   // =============After Questionaire Handlers===================
   const handlePrint = () => {

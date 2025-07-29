@@ -1,12 +1,5 @@
-import { questionsTypes, shoeEnum, videoTypes } from "./types";
+import { questionsTypes, shoeEnum } from "./types";
 
-// screens
-export const screenMap = {
-  0: 1, // start
-  1: 3, // questionaire
-  2: 2, // instruction
-  3: 4, // print
-};
 export const questions: questionsTypes[] = [
   {
     id: "q1",

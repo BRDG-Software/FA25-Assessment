@@ -1,4 +1,3 @@
-
 import { Dispatch, RefObject, SetStateAction } from "react";
 import { UseReactToPrintFn } from "react-to-print";
 
@@ -107,4 +106,7 @@ export interface IMainContext {
   setShowSplash: Dispatch<SetStateAction<boolean>>;
 
   wsRef: React.RefObject<WebSocket | null>;
+
+  setAnswers: Dispatch<SetStateAction<(number | null)[]>>;
+  answers: (number | null)[];
 }
