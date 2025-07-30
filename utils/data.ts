@@ -3,6 +3,24 @@ import { questionsTypes, shoeEnum } from "./types";
 export const questions: questionsTypes[] = [
   {
     id: "q1",
+    text: "Your ideal running weather is…",
+    options: [
+      {
+        label: "A / Crisp and cool—perfect for focus",
+        shoe: shoeEnum.structure,
+      },
+      {
+        label: "B / Light fog—like running through a dream",
+        shoe: shoeEnum.pegasus,
+      },
+      {
+        label: "C / Music and the sound of your breath",
+        shoe: shoeEnum.vomero,
+      },
+    ],
+  },
+  {
+    id: "q2",
     text: "WHAT’S YOUR IDEAL RUNNING COMPANION?",
     options: [
       {
@@ -15,24 +33,6 @@ export const questions: questionsTypes[] = [
       },
       {
         label: "C / Music and the sound of your breath",
-        shoe: shoeEnum.vomero,
-      },
-    ],
-  },
-  {
-    id: "q2",
-    text: "WHAT MOTIVATES YOU TO LACE UP?",
-    options: [
-      {
-        label: "A / Hitting goals and staying consistent",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / Chasingy that runner’s high",
-        shoe: shoeEnum.pegasus,
-      },
-      {
-        label: "C / Escaping into your own rhythm",
         shoe: shoeEnum.vomero,
       },
     ],
@@ -57,35 +57,38 @@ export const questions: questionsTypes[] = [
   },
   {
     id: "q4",
-    text: "WHAT MUSIC DESCRIBES YOUR RUN?",
+    text: "If your run had a color palette, it would be…",
     options: [
       {
-        label: "A / Rhythmic for pace keeping",
+        label: "A / Earth tones—grounded and reliable",
         shoe: shoeEnum.structure,
       },
       {
-        label: "B / Fast paced for energy",
+        label: "B / Neon pops—bold and electric",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / Chill, ambient for vibes",
+        label: "C / Soft gradients—calm and dreamy",
         shoe: shoeEnum.vomero,
       },
     ],
   },
   {
     id: "q5",
-    text: "YOUR RUNNING MANTRA IS...?",
+    text: "When you imagine your perfect run, it feels like...",
     options: [
       {
-        label: "A / Strong. Steady. Secure.",
+        label: "A / A smooth, rhythmic flow that locks you in",
         shoe: shoeEnum.structure,
       },
       {
-        label: "B / Fast feet, free mind",
+        label: "B / A surge of energy that launches you forward",
         shoe: shoeEnum.pegasus,
       },
-      { label: "C / Float through the miles", shoe: shoeEnum.vomero },
+      {
+        label: "C / A soft glide that makes the miles melt away",
+        shoe: shoeEnum.vomero,
+      },
     ],
   },
 ];

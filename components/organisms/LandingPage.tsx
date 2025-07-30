@@ -9,7 +9,8 @@ import Logo from "@/assets/images/runlogolight.svg";
 
 import { cn } from "@/utils/helper";
 import { useMainContext } from "@/providers/MainContext";
-import { layoutEnum } from "@/utils/types";
+import { layoutEnum, shoeEnum } from "@/utils/types";
+import Slip from "./Slip";
 
 type propsType = {
   setSelectedTab: React.Dispatch<React.SetStateAction<layoutEnum>>;
@@ -94,7 +95,7 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
               ref={startBtnRef}
               title="START"
               className={cn(
-                "font-bold mb-6 border-2 border-white text-white",
+                "font-bold mb-6 border-2 border-white text-white text-lg",
                 // splashEffect && "border-black hover:bg-black hover:text-white",
                 // "focus:border-black focus:text-black ease-in-out duration-200",
                 highlightedIdx === 0 &&
@@ -107,7 +108,7 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
               ref={instructionsBtnRef}
               title="INSTRUCTIONS"
               className={cn(
-                "font-bold border-2 border-white text-white",
+                "font-bold border-2 border-white text-white text-lg",
                 // splashEffect && "border-black hover:bg-black hover:text-white",
                 // "focus:border-black focus:text-black  ease-in-out duration-200",
                 highlightedIdx === 1 &&

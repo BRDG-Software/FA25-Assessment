@@ -3,12 +3,16 @@
 import { cn } from "@/utils/helper";
 import React, { HTMLAttributes } from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
+import ForwardIconSvg from "@/assets/images/forwardIcon.svg";
+import DarkForwardIconSvg from "@/assets/images/forwardIconBlack.svg";
 
 interface propsType extends HTMLAttributes<HTMLButtonElement> {
   title: string;
   paddingHorizontal?: string;
   guidetext?: boolean;
   onClick?: () => void;
+  selectedAnswer?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, propsType>(
@@ -19,6 +23,7 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
       paddingHorizontal = "px-16",
       guidetext = false,
       onClick,
+      selectedAnswer,
       ...props
     },
     ref
@@ -40,7 +45,27 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
           {...props}
         >
           {title}
-          {guidetext && <span className="text-sm">Press Enter to Select</span>}
+          {guidetext && (
+            <span className="text-sm flex  gap-2 w-[19%]">
+              Press
+              {selectedAnswer ? (
+                <Image
+                  src={DarkForwardIconSvg}
+                  width={11}
+                  height={11}
+                  alt="forwardIcon"
+                />
+              ) : (
+                <Image
+                  src={ForwardIconSvg}
+                  width={10}
+                  height={10}
+                  alt="forwardIcon"
+                />
+              )}
+              to Select
+            </span>
+          )}
         </button>
       </motion.div>
     );

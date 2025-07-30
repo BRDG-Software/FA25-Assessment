@@ -29,9 +29,9 @@ const QuestionareSection = ({
     setCurrentScreen,
   } = useMainContext();
   const [hoverOption, setHoverOption] = useState<number | null>(null);
-  const [removeOption, setRemoveOption] = useState<number | null>(null);
 
-  const { setSelectedTab, setSelectedHomePageTab } = useMainContext();
+  const { removeOption, handleRemoveOption, setRemoveOption } =
+    useMainContext();
 
   const triggerHover = (oIdx: number) => {
     setHoverOption(oIdx);
@@ -53,39 +53,10 @@ const QuestionareSection = ({
   //   };
   // }, [setSelectedTab]);
 
-  useEffect(() => {
-    const filteredAnswers = answers.filter((item) => item !== null);
-
-    if (filteredAnswers.length > 3) {
-      const duplicates: number[] = [];
-      filteredAnswers.forEach((item, index) => {
-        if (
-          filteredAnswers.indexOf(item as number) !== index &&
-          !duplicates.includes(item as number)
-        ) {
-          duplicates.push(item as number);
-        }
-      });
-
-      if (duplicates.length > 1) {
-        const options = [0, 1, 2];
-        const removeOption = options.find((item) => !duplicates.includes(item));
-        setRemoveOption(removeOption as number);
-      }
-
-      const check = filteredAnswers.filter(
-        (item) => !duplicates.includes(item as number)
-      );
-
-      if (
-        duplicates.length === 1 &&
-        removeOption === null &&
-        check.length > 1
-      ) {
-        setSelectedHomePageTab(homePageTabsEnum.animatedText);
-      }
-    }
-  }, [answers, selectedOption]);
+  // useEffect(() => {
+  //   const removeOption = handleRemoveOption();
+  //   setRemoveOption(removeOption);
+  // }, [answers, selectedOption]);
 
   return (
     <motion.div
@@ -106,7 +77,9 @@ const QuestionareSection = ({
         fontSize="text-6xl"
         fontWeight="font-medium "
         textColor="text-white"
-        className={`uppercase mt-4 leading-15`}
+        className={`uppercase mt-4 leading-15 ${
+          selectedQuestion.id === "q5" && "mt-0"
+        }`}
       />
       {selectedQuestion.options.map((opt: optionTypes, oIdx) => {
         return (
@@ -118,7 +91,7 @@ const QuestionareSection = ({
                 ref={questionaireRefs[oIdx]}
                 title={opt.label}
                 className={cn(
-                  "flex text-white justify-between items-center px-4 text-3xl py-4 border-0 rounded-xl hover:!border-2 w-[95%] hover:!border-white hover:!bg-transparent hover:!text-white font-medium transition-all duration-300",
+                  "flex text-white justify-between items-center  px-4 text-3xl py-4 border-0 rounded-xl hover:!border-2 w-[95%] hover:!border-white hover:!bg-transparent hover:!text-white font-medium transition-all duration-300",
                   selectedOption === oIdx &&
                     selectedQuestion?.id ===
                       questions[findIndex(selectedQuestion?.id)].id &&
@@ -127,7 +100,7 @@ const QuestionareSection = ({
                     "border-4 border-white text-white scale-110",
 
                   answers[findIndex(selectedQuestion?.id)] === oIdx &&
-                    "!bg-primary-pink !text-white !border-primary-pink"
+                    "!bg-primary-pink !text-black  !border-primary-pink"
                 )}
                 guidetext={hoverOption === oIdx || highlightedIdx === oIdx}
                 onClick={() => {
@@ -137,6 +110,9 @@ const QuestionareSection = ({
                     selectedQuestion?.id
                   );
                 }}
+                selectedAnswer={
+                  answers[findIndex(selectedQuestion?.id)] === oIdx
+                }
                 onMouseOver={() => triggerHover(oIdx)}
                 onMouseLeave={() => setHoverOption(null)}
               />

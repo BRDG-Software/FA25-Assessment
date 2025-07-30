@@ -106,9 +106,9 @@ export default function HomePage() {
     Vomero: total ? Math.round((shoeCount.Vomero / total) * 100) : 0,
   };
 
-  const progress = Math.round((total / questions.length) * 100);
-
-  console.log({ shoePercent });
+  const progress = Math.round(
+    (total / (total === 4 ? 4 : questions.length)) * 100
+  );
 
   // ===============Effects========================
 

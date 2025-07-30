@@ -109,4 +109,7 @@ export interface IMainContext {
 
   setAnswers: Dispatch<SetStateAction<(number | null)[]>>;
   answers: (number | null)[];
+  removeOption: number | null;
+  setRemoveOption: Dispatch<SetStateAction<number | null>>;
+  handleRemoveOption: () => number | null;
 }

@@ -10,6 +10,7 @@ import {
   questionsTypes,
 } from "@/utils/types";
 import downloadjs from "downloadjs";
+import { number } from "framer-motion";
 import html2canvas from "html2canvas";
 import {
   createContext,
@@ -51,9 +52,11 @@ export const MainContext = createContext<IMainContext>({
   showSplash: false,
   setShowSplash: () => {},
   wsRef: {} as React.RefObject<WebSocket | null>,
-
   answers: [],
   setAnswers: () => {},
+  removeOption: null,
+  setRemoveOption: () => {},
+  handleRemoveOption: () => null,
 });
 export const useMainContext = () => useContext(MainContext);
 
@@ -111,6 +114,8 @@ export default function MainContextProvider({
   const [selectedTab, setSelectedTab] = useState<layoutEnum>(
     layoutEnum.landingPage
   );
+
+  const [removeOption, setRemoveOption] = useState<number | null>(null);
 
   // =================Socket Initialization====================
 
@@ -306,6 +311,7 @@ export default function MainContextProvider({
         }
 
         if (data?.event === SocketEventEnum.NEXT_BUTTON && data.value === 1) {
+          console.log("first", removeOption, currentScreen);
           setLastSocketEvent(SocketEventEnum.NEXT_BUTTON);
           if (currentScreen < 0) return;
           if (currentScreen === 0 && highlightedIdx === 0) {
@@ -334,11 +340,16 @@ export default function MainContextProvider({
 
             // To send meter3 value:
             ws.send(JSON.stringify({ event: "meter3", value: meter3 }));
+
             if (qIdx === 7) return;
+            const tempRemoveOption = handleRemoveOption();
             ws.send(
               JSON.stringify({
                 event: SocketEventEnum.SCREEN_NUMBER,
                 value: findIndex(selectedQuestion?.id) + 3,
+                ...(qIdx === 6 && {
+                  option: tempRemoveOption === null ? 3 : 2,
+                }),
               })
             );
           }
@@ -399,6 +410,7 @@ export default function MainContextProvider({
     meter1,
     meter2,
     meter3,
+    removeOption,
   ]);
 
   useEffect(() => {
@@ -472,6 +484,40 @@ export default function MainContextProvider({
     }
   };
 
+  const handleRemoveOption = () => {
+    const filteredAnswers = answers.filter((item) => item !== null);
+    let tempOption = null;
+
+    if (filteredAnswers.length > 3) {
+      const duplicates: number[] = [];
+      filteredAnswers.forEach((item, index) => {
+        if (
+          filteredAnswers.indexOf(item as number) !== index &&
+          !duplicates.includes(item as number)
+        ) {
+          duplicates.push(item as number);
+        }
+      });
+
+      if (duplicates.length > 1) {
+        const options = [0, 1, 2];
+        const hideOption = options.find((item) => !duplicates.includes(item));
+        console.log("sdafg", hideOption);
+        tempOption = hideOption as number;
+        // setRemoveOption(hideOption as number);
+      }
+
+      const check = filteredAnswers.filter(
+        (item) => !duplicates.includes(item as number)
+      );
+
+      if (duplicates.length === 1 && tempOption === null && check.length > 1) {
+        setSelectedHomePageTab(homePageTabsEnum.animatedText);
+      }
+    }
+    return tempOption;
+  };
+
   // =====================================
 
   const values: IMainContext = {
@@ -503,9 +549,11 @@ export default function MainContextProvider({
     setSelectedHomePageTab,
     printSlipRef,
     handlePrint,
-
     setAnswers,
     answers,
+    removeOption,
+    setRemoveOption,
+    handleRemoveOption,
   };
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 }

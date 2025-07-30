@@ -241,7 +241,7 @@ export default function AnimatedText({
         <div className="hidden">
           <div ref={printSlipRef}>
             <Slip
-              shoeName={selectedWinnerShoe}
+              shoeName={selectedWinnerShoe[0]}
               progressChartReading={progressChartReading}
             />
           </div>
