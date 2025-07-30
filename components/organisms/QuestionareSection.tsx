@@ -1,9 +1,4 @@
-import {
-  homePageTabsEnum,
-  layoutEnum,
-  optionTypes,
-  questionsTypes,
-} from "@/utils/types";
+import { homePageTabsEnum, optionTypes, questionsTypes } from "@/utils/types";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import Text from "../atoms/Text";
@@ -65,10 +60,10 @@ const QuestionareSection = ({
       const duplicates: number[] = [];
       filteredAnswers.forEach((item, index) => {
         if (
-          filteredAnswers.indexOf(item) !== index &&
-          !duplicates.includes(item)
+          filteredAnswers.indexOf(item as number) !== index &&
+          !duplicates.includes(item as number)
         ) {
-          duplicates.push(item);
+          duplicates.push(item as number);
         }
       });
 
@@ -79,7 +74,7 @@ const QuestionareSection = ({
       }
 
       const check = filteredAnswers.filter(
-        (item) => !duplicates.includes(item)
+        (item) => !duplicates.includes(item as number)
       );
 
       if (

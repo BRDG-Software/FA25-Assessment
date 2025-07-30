@@ -110,6 +110,8 @@ export default function HomePage() {
 
   console.log({ shoePercent });
 
+  // ===============Effects========================
+
   // =============After Questionaire Handlers===================
   const handlePrint = () => {
     // printSlipById("slip-pdf");

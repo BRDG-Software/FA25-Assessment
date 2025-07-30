@@ -9,6 +9,7 @@ import {
   layoutEnum,
   questionsTypes,
 } from "@/utils/types";
+import downloadjs from "downloadjs";
 import html2canvas from "html2canvas";
 import {
   createContext,
@@ -18,7 +19,6 @@ import {
   useRef,
   useState,
 } from "react";
-import { saveAs } from "file-saver";
 
 const MAX_HIGHLIGHT_INDEX = 3;
 
@@ -58,15 +58,19 @@ export const MainContext = createContext<IMainContext>({
 export const useMainContext = () => useContext(MainContext);
 
 function getMeterFrequencies(answers: (number | null)[]) {
-  const total = answers.length;
-  if (total === 0) return [0, 0, 0];
-
   const counts = [0, 0, 0];
+  let nonNullTotal = 0;
+
   answers.forEach((a) => {
-    if (a === 0 || a === 1 || a === 2) counts[a]++;
+    if (a === 0 || a === 1 || a === 2) {
+      counts[a]++;
+      nonNullTotal++;
+    }
   });
 
-  return counts.map((count) => count / total);
+  if (nonNullTotal === 0) return [0, 0, 0];
+
+  return counts.map((count) => count / nonNullTotal);
 }
 
 export default function MainContextProvider({
@@ -117,13 +121,19 @@ export default function MainContextProvider({
     useState<homePageTabsEnum>(homePageTabsEnum.questionareTab);
 
   const handleReset = () => {
+    console.log("logging");
     setSelectedTab(layoutEnum.landingPage);
     setShowSplash(false);
     setCurrentScreen(0);
     setHighlightedIdx(0);
     setSelectedOption(null);
+    setAnswers([]);
     setSelectedQuestion(questions[0]);
     setSelectedHomePageTab(homePageTabsEnum.questionareTab);
+    if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN)
+      wsRef.current.send(
+        JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
+      );
   };
 
   // Modify the resetTimer function to accept any Event type
@@ -408,18 +418,48 @@ export default function MainContextProvider({
   }, [answers, meter1, meter2, meter3, currentScreen, lastSocketEvent]);
 
   const handlePrint = async () => {
-    const element = document.getElementById("slip-pdf"); // ID of the HTML element containing your component
-    const canvas = await html2canvas(element as HTMLElement);
-    const data = canvas.toDataURL("image/png"); // Capture as PNG first
+    const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
+    if (!pricingTableElmt) return;
 
-    // To convert to BMP, you would need a client-side library or send to a server for conversion.
-    // As a direct download, you can offer the PNG:
-    const link = document.createElement("a");
-    link.href = data;
-    link.download = "my-component.png"; // Or send to a server for BMP conversion
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Clone the element
+    const copiedPricingTableElmt = pricingTableElmt.cloneNode(
+      true
+    ) as HTMLElement;
+
+    // Create a wrapper to control size
+    const wrapper = document.createElement("div");
+    wrapper.style.width = "464px";
+    wrapper.style.height = "787px";
+    wrapper.style.position = "fixed";
+    wrapper.style.right = "100%";
+    wrapper.style.overflow = "hidden"; // Optional: crop content
+    wrapper.appendChild(copiedPricingTableElmt);
+
+    // Apply size directly to the cloned element if needed
+    copiedPricingTableElmt.style.width = "100%";
+    copiedPricingTableElmt.style.height = "100%";
+
+    document.body.appendChild(wrapper);
+
+    // Render to canvas
+    const canvas = await html2canvas(wrapper, {
+      width: 464,
+      height: 787,
+      windowWidth: 464, // help ensure layout matches
+      windowHeight: 787,
+    });
+
+    // Cleanup
+    wrapper.remove();
+
+    // Try BMP (browser support may vary)
+    const dataURL = canvas.toDataURL("image/bmp");
+    downloadjs(dataURL, "download.bmp", "image/bmp");
+    // to show redirection screen since there is no functionality that runs after user has closed the download popup or
+    setTimeout(() => setShowSplash(true), 3000);
+    setTimeout(() => {
+      handleReset();
+    }, 6000);
   };
 
   const handleBack = () => {
