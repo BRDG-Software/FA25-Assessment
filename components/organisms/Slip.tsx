@@ -20,7 +20,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
   const slipCount: TLocalStorageCount | null =
     getFromLocalStorage(SLIP_COUNT_KEY);
 
-  console.log({ slipCount });
+  console.log(slipCount, "slipCount");
 
   const entries = Object.entries(progressChartReading || {}) as [
     shoeEnum,

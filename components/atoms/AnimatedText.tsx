@@ -144,10 +144,10 @@ export default function AnimatedText({
             sequence={[index * 1200, text]}
             wrapper="div"
             className={cn(
-              "capitalize",
+              "uppercase",
               index === 0
                 ? "text-white text-4xl font-medium"
-                : "text-primary-pink text-2xl font-normal"
+                : "text-primary-pink text-2xl font-normal uppercase"
             )}
             cursor={false}
           />

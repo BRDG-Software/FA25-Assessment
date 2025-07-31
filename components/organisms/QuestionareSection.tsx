@@ -53,10 +53,10 @@ const QuestionareSection = ({
   //   };
   // }, [setSelectedTab]);
 
-  // useEffect(() => {
-  //   const removeOption = handleRemoveOption();
-  //   setRemoveOption(removeOption);
-  // }, [answers, selectedOption]);
+  useEffect(() => {
+    const removeOption = handleRemoveOption();
+    setRemoveOption(removeOption);
+  }, [answers, selectedOption]);
 
   return (
     <motion.div
@@ -91,7 +91,7 @@ const QuestionareSection = ({
                 ref={questionaireRefs[oIdx]}
                 title={opt.label}
                 className={cn(
-                  "flex text-white justify-between items-center  px-4 text-3xl py-4 border-0 rounded-xl hover:!border-2 w-[95%] hover:!border-white hover:!bg-transparent hover:!text-white font-medium transition-all duration-300",
+                  "flex text-white justify-between items-center  px-4 text-[26px] py-4 border-0 rounded-xl hover:!border-2 w-[95%] hover:!border-white hover:!bg-transparent hover:!text-white font-medium transition-all duration-300",
                   selectedOption === oIdx &&
                     selectedQuestion?.id ===
                       questions[findIndex(selectedQuestion?.id)].id &&

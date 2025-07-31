@@ -114,4 +114,6 @@ export interface IMainContext {
   removeOption: number | null;
   setRemoveOption: Dispatch<SetStateAction<number | null>>;
   handleRemoveOption: () => number | null;
+  questionsLength: boolean;
+  setQuestionsLength: Dispatch<SetStateAction<boolean>>;
 }

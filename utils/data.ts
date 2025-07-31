@@ -96,18 +96,16 @@ export const questions: questionsTypes[] = [
 ];
 
 export const calibrationSteps: string[] = [
-  "CALIBRATION IN PROGRESS",
-  "ANALYZING RUN STYLE",
-  "ACCESSING PACE PREFERENCE",
-  "DETERMINING",
-  "CALCULATING STRIDE LENGTH",
+  "CALCULATING WEATHER PREFERENCES",
+  "assessing Run companion compatibility",
+  "analyzing stride",
+  "optimizing STRIDE LENGTH",
   "SYNCHRONIZING BREATHING PATTERN",
-  "EVALUATING FOOT IMPACT",
-  "MAPPING TERRAIN RESPONSE",
-  "OPTIMIZING ENERGY OUTPUT",
-  "SCANNING MUSCLE ENGAGEMENT",
-  "RETREIVING ENDURACE DATA",
-  "ASSESSING CADENCE EFFICIENCY",
+  "EVALUATING run flow",
+  "gauging ENERGY OUTPUT",
+  "reading color palette hues",
+  "RETRIEVING ENDURANCE DATA",
+  "generating perfect run",
 ];
 
 export const runSteps = {

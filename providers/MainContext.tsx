@@ -63,6 +63,8 @@ export const MainContext = createContext<IMainContext>({
   removeOption: null,
   setRemoveOption: () => {},
   handleRemoveOption: () => null,
+  questionsLength: false,
+  setQuestionsLength: () => {},
 });
 export const useMainContext = () => useContext(MainContext);
 
@@ -103,6 +105,7 @@ export default function MainContextProvider({
   const [highlightedIdx, setHighlightedIdx] = useState(0);
   const [currentScreen, setCurrentScreen] = useState(0);
   const [lastSocketEvent, setLastSocketEvent] = useState<string | null>(null);
+  const [questionsLength, setQuestionsLength] = useState<boolean>(false);
 
   const [answers, setAnswers] = useState<(number | null)[]>(
     Array(questions.length).fill(null)
@@ -227,8 +230,6 @@ export default function MainContextProvider({
     }
   }, [selectedHomePageTab, visitedRef]);
 
-  console.log({ selectedHomePageTab, currentScreen, showSplash, selectedTab });
-
   // Create a separate effect for WebSocket initialization with no dependencies
   useEffect(() => {
     if (!wsRef.current) {
@@ -328,7 +329,6 @@ export default function MainContextProvider({
         }
 
         if (data?.event === SocketEventEnum.NEXT_BUTTON && data.value === 1) {
-          console.log("first", removeOption, currentScreen);
           setLastSocketEvent(SocketEventEnum.NEXT_BUTTON);
           if (currentScreen < 0) return;
           if (currentScreen === 0 && highlightedIdx === 0) {
@@ -446,7 +446,24 @@ export default function MainContextProvider({
     }
   }, [answers, meter1, meter2, meter3, currentScreen, lastSocketEvent]);
 
+  async function saveFile() {
+    const filename = "slipData.txt";
+    const content = "This is the content of my file.";
+
+    const response = await fetch("/api/slipRecord/route.ts", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ filename, content }),
+    });
+
+    const data = await response.json();
+    console.log(data.message);
+  }
+
   const handlePrint = async () => {
+    await saveFile();
     const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
     if (!pricingTableElmt) return;
 
@@ -534,7 +551,6 @@ export default function MainContextProvider({
       if (duplicates.length > 1) {
         const options = [0, 1, 2];
         const hideOption = options.find((item) => !duplicates.includes(item));
-        console.log("sdafg", hideOption);
         tempOption = hideOption as number;
         // setRemoveOption(hideOption as number);
       }
@@ -544,6 +560,7 @@ export default function MainContextProvider({
       );
 
       if (duplicates.length === 1 && tempOption === null && check.length > 1) {
+        setQuestionsLength(true);
         setSelectedHomePageTab(homePageTabsEnum.animatedText);
       }
     }
@@ -586,6 +603,8 @@ export default function MainContextProvider({
     removeOption,
     setRemoveOption,
     handleRemoveOption,
+    questionsLength,
+    setQuestionsLength,
   };
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 }

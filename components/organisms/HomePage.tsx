@@ -27,6 +27,7 @@ export default function HomePage() {
     setSelectedHomePageTab,
     answers,
     setAnswers,
+    questionsLength,
   } = useMainContext();
 
   // =====================REFS==================
@@ -107,7 +108,7 @@ export default function HomePage() {
   };
 
   const progress = Math.round(
-    (total / (total === 4 ? 4 : questions.length)) * 100
+    (total / (questionsLength ? 4 : questions.length)) * 100
   );
 
   // ===============Effects========================
