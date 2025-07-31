@@ -1,9 +1,10 @@
 "use client";
-import { questions } from "@/utils/data";
+import { SLIP_COUNT_KEY, questions } from "@/utils/data";
 import { findIndex } from "@/utils/helper";
 import {
   IMainContext,
   SocketEventEnum,
+  TLocalStorageCount,
   TSocketPayload,
   homePageTabsEnum,
   layoutEnum,
@@ -12,6 +13,7 @@ import {
 import downloadjs from "downloadjs";
 import { number } from "framer-motion";
 import html2canvas from "html2canvas";
+import { v4 as uuidv4 } from "uuid";
 import {
   createContext,
   RefObject,
@@ -20,6 +22,10 @@ import {
   useRef,
   useState,
 } from "react";
+import {
+  getFromLocalStorage,
+  saveToLocalStorage,
+} from "@/utils/localstorage.util";
 
 const MAX_HIGHLIGHT_INDEX = 3;
 
@@ -74,6 +80,17 @@ function getMeterFrequencies(answers: (number | null)[]) {
   if (nonNullTotal === 0) return [0, 0, 0];
 
   return counts.map((count) => count / nonNullTotal);
+}
+
+function updateCount() {
+  let data: TLocalStorageCount | null = getFromLocalStorage(SLIP_COUNT_KEY);
+
+  if (!data) {
+    data = { value: 1 };
+  } else {
+    data.value += 1;
+  }
+  saveToLocalStorage(SLIP_COUNT_KEY, data);
 }
 
 export default function MainContextProvider({
@@ -433,6 +450,8 @@ export default function MainContextProvider({
     const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
     if (!pricingTableElmt) return;
 
+    updateCount(); //updates the receipt count on top
+
     // Clone the element
     const copiedPricingTableElmt = pricingTableElmt.cloneNode(
       true
@@ -465,10 +484,23 @@ export default function MainContextProvider({
     wrapper.remove();
 
     // Try BMP (browser support may vary)
+    const id: string = uuidv4();
     const dataURL = canvas.toDataURL("image/bmp");
-    downloadjs(dataURL, "download.bmp", "image/bmp");
+    downloadjs(dataURL, `${id}.bmp`, "image/bmp");
     // to show redirection screen since there is no functionality that runs after user has closed the download popup or
-    setTimeout(() => setShowSplash(true), 3000);
+    setTimeout(async () => {
+      setShowSplash(true);
+      await fetch("/api/print", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          exePath: process.env.NEXT_PUBLIC_SCRIPT_PATH as string,
+          bmpPath: `${
+            process.env.NEXT_PUBLIC_DOWNLOAD_PATH as string
+          }${id}.bmp`,
+        }),
+      });
+    }, 3000);
     setTimeout(() => {
       handleReset();
     }, 6000);

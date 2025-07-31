@@ -1,5 +1,7 @@
 import { questionsTypes, shoeEnum } from "./types";
 
+export const SLIP_COUNT_KEY = "slip_count";
+
 export const questions: questionsTypes[] = [
   {
     id: "q1",

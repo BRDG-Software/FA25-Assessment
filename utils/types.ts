@@ -32,6 +32,8 @@ export enum homePageTabsEnum {
 
 // =========================Types=====================
 
+export type TLocalStorageCount = { value: number };
+
 export type optionTypes = {
   label: string;
   shoe: shoeEnum;

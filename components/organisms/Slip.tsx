@@ -1,24 +1,26 @@
 import SlipBorderIcon from "../atoms/SlipBorderIcon";
-import Image from "next/image";
 import Logo from "@/public/assets/icons/SVG/logo.svg";
 import Divider from "../atoms/Divider";
 import React from "react";
-import TripleDotGraph from "../atoms/TripleDotGraph";
 import DotsSvg from "@/icons/dots-svg";
 import PerformanceBarChart from "../atoms/PerformanceBarChart";
-import { shoeEnum } from "@/utils/types";
-import { cn } from "@/utils/helper";
+import { TLocalStorageCount, shoeEnum } from "@/utils/types";
 import Text from "../atoms/Text";
 import VomeroSvg from "@/assets/images/Vomero.svg";
 import PegasusSvg from "@/assets/images/Pegasus.svg";
 import StructureSvg from "@/assets/images/Structure.svg";
+import { getFromLocalStorage } from "@/utils/localstorage.util";
+import { SLIP_COUNT_KEY } from "@/utils/data";
 
 interface Props {
   shoeName: shoeEnum;
   progressChartReading: Record<shoeEnum, number>;
 }
 export default function Slip({ shoeName, progressChartReading }: Props) {
-  console.log({ progressChartReading });
+  const slipCount: TLocalStorageCount | null =
+    getFromLocalStorage(SLIP_COUNT_KEY);
+
+  console.log({ slipCount });
 
   const entries = Object.entries(progressChartReading || {}) as [
     shoeEnum,
@@ -46,7 +48,9 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
         <div className="flex flex-col h-full gap-y-7 overflow-hidden">
           <div className="flex flex-col  gap-x-3 items-start justify-start mt-4">
             <Text
-              title="Nike Soho Assessment # : 000"
+              title={`Nike Soho Assessment # : ${slipCount?.value
+                .toString()
+                .padStart(3, "0")}`}
               fontSize="text-sm"
               fontWeight="font-medium"
               className="uppercase"
