@@ -130,7 +130,7 @@ const AnimatedBarChart: React.FC<AnimatedBarChartProps> = ({ values }) => {
                   animate={{
                     width:
                       i === 0
-                        ? fillWidth + 0.5
+                        ? fillWidth + 0.2
                         : i === 1
                         ? fillWidth
                         : fillWidth - 1.7,
