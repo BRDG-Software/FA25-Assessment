@@ -2,10 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
 
-export default async function slipRecordeHandler(
-  req: NextRequest,
-  res: NextResponse
-) {
+export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {
     const body = await req.json();
     const { fileName, content } = body as { fileName: string; content: string };
@@ -20,12 +17,30 @@ export default async function slipRecordeHandler(
     }
 
     try {
-      const fileExist = fs.existsSync(fileName);
+      let existingData: any = [];
+      const filePath = path.join(process.cwd(), "slipData", fileName);
+
+      const fileExist = fs.existsSync(filePath);
+
       if (fileExist) {
-        fs.writeFileSync(fileName, content);
+        const prevContent = fs.readFileSync(filePath, "utf-8");
+
+        existingData = [prevContent];
+
+        existingData.push(content);
+        fs.writeFileSync(fileName, JSON.stringify(existingData, null, 2));
       } else {
         const filePath = path.join(process.cwd(), "slipData", fileName);
-        fs.writeFile(filePath, content, "utf-8", () => {});
+        const fileContent: any = [content];
+
+        fs.writeFile(
+          filePath,
+          JSON.stringify(fileContent, null, 2),
+          "utf-8",
+          (data) => {
+            console.log(data, "data");
+          }
+        );
       }
 
       return new Response(

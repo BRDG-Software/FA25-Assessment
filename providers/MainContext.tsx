@@ -17,6 +17,7 @@ import { v4 as uuidv4 } from "uuid";
 import {
   createContext,
   RefObject,
+  useCallback,
   useContext,
   useEffect,
   useRef,
@@ -93,6 +94,7 @@ function updateCount() {
     data.value += 1;
   }
   saveToLocalStorage(SLIP_COUNT_KEY, data);
+  return data.value;
 }
 
 export default function MainContextProvider({
@@ -141,6 +143,7 @@ export default function MainContextProvider({
 
   const wsRef = useRef<WebSocket | null>(null);
   const connectionCounter = useRef<number>(0);
+  const removeOptionRef = useRef<number | null>(null);
 
   const [selectedHomePageTab, setSelectedHomePageTab] =
     useState<homePageTabsEnum>(homePageTabsEnum.questionareTab);
@@ -264,6 +267,12 @@ export default function MainContextProvider({
     const ws = wsRef.current;
     if (!ws) return;
 
+    console.log(
+      removeOptionRef.current,
+      "removeOptionRef.current is useEffect"
+    );
+    console.log(removeOption, "Remove option is useEffect");
+
     const handleStartScreen = (event: MessageEvent) => {
       try {
         const data: TSocketPayload = JSON.parse(event.data);
@@ -360,15 +369,30 @@ export default function MainContextProvider({
 
             if (qIdx === 7) return;
             const tempRemoveOption = handleRemoveOption();
-            ws.send(
-              JSON.stringify({
-                event: SocketEventEnum.SCREEN_NUMBER,
-                value: findIndex(selectedQuestion?.id) + 3,
-                ...(qIdx === 6 && {
-                  option: tempRemoveOption === null ? 3 : 2,
-                }),
-              })
-            );
+            console.log(tempRemoveOption, "tro");
+            console.log(removeOptionRef.current, "removeOptionRef");
+
+            // For qIdx === 6, add a small delay to ensure state is updated
+            if (qIdx === 6) {
+              setTimeout(() => {
+                const finalOptionCount =
+                  removeOptionRef.current === null ? 3 : 2;
+                ws.send(
+                  JSON.stringify({
+                    event: SocketEventEnum.SCREEN_NUMBER,
+                    value: findIndex(selectedQuestion?.id) + 3,
+                    option: finalOptionCount,
+                  })
+                );
+              }, 10); // 10ms delay should be enough
+            } else {
+              ws.send(
+                JSON.stringify({
+                  event: SocketEventEnum.SCREEN_NUMBER,
+                  value: findIndex(selectedQuestion?.id) + 3,
+                })
+              );
+            }
           }
 
           if (currentScreen === 3) {
@@ -428,6 +452,8 @@ export default function MainContextProvider({
     meter2,
     meter3,
     removeOption,
+    answers,
+    removeOptionRef,
   ]);
 
   useEffect(() => {
@@ -446,28 +472,27 @@ export default function MainContextProvider({
     }
   }, [answers, meter1, meter2, meter3, currentScreen, lastSocketEvent]);
 
-  async function saveFile() {
-    const filename = "slipData.txt";
-    const content = "This is the content of my file.";
+  async function saveFile(slipNo: number) {
+    const fileName = "slipData.txt";
+    const content = JSON.stringify({ slipNo, createdAt: new Date() });
 
-    const response = await fetch("/api/slipRecord/route.ts", {
+    const response = await fetch("/api/slipRecord", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ filename, content }),
+      body: JSON.stringify({ fileName, content }),
     });
 
     const data = await response.json();
-    console.log(data.message);
   }
 
   const handlePrint = async () => {
-    await saveFile();
     const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
     if (!pricingTableElmt) return;
 
-    updateCount(); //updates the receipt count on top
+    const slipNo = updateCount(); //updates the receipt count on top
+    await saveFile(slipNo);
 
     // Clone the element
     const copiedPricingTableElmt = pricingTableElmt.cloneNode(
@@ -533,7 +558,7 @@ export default function MainContextProvider({
     }
   };
 
-  const handleRemoveOption = () => {
+  const handleRemoveOption = useCallback(() => {
     const filteredAnswers = answers.filter((item) => item !== null);
     let tempOption = null;
 
@@ -564,8 +589,10 @@ export default function MainContextProvider({
         setSelectedHomePageTab(homePageTabsEnum.animatedText);
       }
     }
+    console.log(tempOption, "inside handle Remove function");
+    removeOptionRef.current = tempOption;
     return tempOption;
-  };
+  }, [answers]);
 
   // =====================================
 

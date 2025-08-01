@@ -1,4 +1,3 @@
-import SlipBorderIcon from "../atoms/SlipBorderIcon";
 import Logo from "@/public/assets/icons/SVG/logo.svg";
 import Divider from "../atoms/Divider";
 import React from "react";
@@ -6,21 +5,19 @@ import DotsSvg from "@/icons/dots-svg";
 import PerformanceBarChart from "../atoms/PerformanceBarChart";
 import { TLocalStorageCount, shoeEnum } from "@/utils/types";
 import Text from "../atoms/Text";
-import VomeroSvg from "@/assets/images/Vomero.svg";
-import PegasusSvg from "@/assets/images/Pegasus.svg";
-import StructureSvg from "@/assets/images/Structure.svg";
 import { getFromLocalStorage } from "@/utils/localstorage.util";
 import { SLIP_COUNT_KEY } from "@/utils/data";
-
+import VomeroIcon from "@/icons/vomero-svg";
+import StructureIcon from "@/icons/structure-svg";
+import NikeCornorIcon from "@/icons/nike-cornor.icon";
+import PegasusSvg from "@/icons/pegasus-svg";
 interface Props {
-  shoeName: shoeEnum;
+  shoeName: string;
   progressChartReading: Record<shoeEnum, number>;
 }
 export default function Slip({ shoeName, progressChartReading }: Props) {
   const slipCount: TLocalStorageCount | null =
     getFromLocalStorage(SLIP_COUNT_KEY);
-
-  console.log(slipCount, "slipCount");
 
   const entries = Object.entries(progressChartReading || {}) as [
     shoeEnum,
@@ -41,7 +38,8 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
       className="w-[464px] h-[787px] flex justify-between px-2 overflow-hidden "
     >
       {/* //left part */}
-      <SlipBorderIcon />
+      {/* <SlipBorderIcon /> */}
+      <NikeCornorIcon />
 
       {/* center part */}
       <div className="w-full flex flex-col  px-5 ">
@@ -82,7 +80,13 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                   textColor="text-black"
                 />
               </div>
-              <img src={Logo} alt="logo" width={100} height={100} />
+              <img
+                src={Logo}
+                alt="logo"
+                crossOrigin="anonymous"
+                width={100}
+                height={100}
+              />
             </div>
           </div>
           {/* calibration bar */}
@@ -94,7 +98,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
               </p>
             </div>
             {/* graph */}
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center ">
               {/* <TripleDotGraph
                 structurePct={progressChartReading.Structure}
                 pegasusPct={progressChartReading.Pegasus}
@@ -102,16 +106,32 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
               /> */}
 
               {shoeName === shoeEnum.vomero ? (
-                <img src={VomeroSvg} height={100} width={100} alt="vomero" />
+                // <img
+                //   src={VomeroSvg}
+                //   height={100}
+                //   width={100}
+                //   crossOrigin="anonymous"
+                //   alt="vomero"
+                // />
+                <VomeroIcon />
               ) : shoeName === shoeEnum.pegasus ? (
-                <img src={PegasusSvg} height={100} width={100} alt="pagasus" />
+                // <img
+                //   src={PegasusSvg}
+                //   height={100}
+                //   width={100}
+                //   crossOrigin="anonymous"
+                //   alt="pagasus"
+                // />
+                <PegasusSvg />
               ) : (
-                <img
-                  src={StructureSvg}
-                  height={100}
-                  width={100}
-                  alt="structure"
-                />
+                // <img
+                //   src={StructureSvg}
+                //   height={100}
+                //   width={100}
+                //   alt="structure"
+                //   crossOrigin="anonymous"
+                // />
+                <StructureIcon />
               )}
             </div>
             {/* result bar */}
@@ -168,7 +188,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
       </div>
 
       {/* right part */}
-      <SlipBorderIcon />
+      <NikeCornorIcon />
     </div>
   );
 }

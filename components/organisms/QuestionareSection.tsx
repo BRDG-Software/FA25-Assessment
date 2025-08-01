@@ -55,6 +55,7 @@ const QuestionareSection = ({
 
   useEffect(() => {
     const removeOption = handleRemoveOption();
+
     setRemoveOption(removeOption);
   }, [answers, selectedOption]);
 

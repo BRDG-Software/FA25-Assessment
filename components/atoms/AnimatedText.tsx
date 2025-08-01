@@ -33,7 +33,7 @@ export default function AnimatedText({
   // const { handlePrint, printSlipRef, currentScreen } = useMainContext();
 
   //================== Animation durations ==================
-  const calibrationDuration = calibrationSteps.length * 1200; // 1.2s per step
+  const calibrationDuration = calibrationSteps.length * 1300; // 1.2s per step
   const runStepDuration = 1200;
   const runStepsArray = Object.values(shoeEnum);
 
@@ -105,24 +105,24 @@ export default function AnimatedText({
   //   }
   // }, [showPrintButton]);
 
-  const unSelectedShoe = useMemo(() => {
-    const unSelected = runStepsArray.filter(
-      (item) => !selectedShoe.includes(item)
-    );
-    return unSelected;
-  }, [runStepsArray, selectedShoe]);
+  // const unSelectedShoe = useMemo(() => {
+  //   const unSelected = runStepsArray.filter(
+  //     (item) => !selectedShoe.includes(item)
+  //   );
+  //   return unSelected;
+  // }, [runStepsArray, selectedShoe]);
 
-  const selectedWinnerShoe = useMemo(() => {
-    const selectedArray: shoeEnum[] = [];
-    runStepsArray.forEach((shoe) => {
-      selectedShoe.forEach((item) => {
-        if (item === shoe) {
-          selectedArray.push(shoe);
-        }
-      });
-    });
-    return selectedArray;
-  }, [runStepsArray, selectedShoe]);
+  // const selectedWinnerShoe = useMemo(() => {
+  //   const selectedArray: shoeEnum[] = [];
+  //   runStepsArray.forEach((shoe) => {
+  //     selectedShoe.forEach((item) => {
+  //       if (item === shoe) {
+  //         selectedArray.push(shoe);
+  //       }
+  //     });
+  //   });
+  //   return selectedArray;
+  // }, [runStepsArray, selectedShoe]);
 
   if (showSplash) {
     return (
@@ -160,7 +160,7 @@ export default function AnimatedText({
   return (
     <div className="h-full flex flex-col mt-10 items-start space-y-6 pl-5 py-6">
       <div className="space-y-6 w-full">
-        {animationEnded &&
+        {/* {animationEnded &&
           selectedWinnerShoe.map((item) => {
             return (
               <Text
@@ -173,7 +173,7 @@ export default function AnimatedText({
                 )}
               />
             );
-          })}
+          })} */}
 
         {/* these are the styling below done earlier */}
         {/* ${
@@ -182,38 +182,42 @@ export default function AnimatedText({
                     "opacity-0 duration-700 -translate-x-32"
                   } */}
         {/* ${hideText2 && index === 0 && "opacity-0 duration-700 -translate-x-32"} */}
-        {animationEnded &&
-          unSelectedShoe.map((shoe) => {
-            return (
-              <Text
-                key={shoe}
-                title={`${runSteps[shoe]}.`}
-                className={cn(
-                  `text-6xl font-bold uppercase text-white leading-12
-                  `
-                )}
-              />
-            );
-          })}
-        {!animationEnded &&
-          runStepsArray.map((shoe, index) => {
-            return (
-              <TypeAnimation
-                key={shoe}
-                sequence={[index * runStepDuration, `${runSteps[shoe]}.`]}
-                wrapper="div"
-                className={cn(
-                  "text-6xl font-bold uppercase text-white leading-12"
-                  // (selectedShoe.length > 1
-                  //   ? selectedShoe[index] === shoe
-                  //   : selectedShoe[0] === shoe) &&
-                  //   showResult &&
-                  //   "text-primary-pink"
-                )}
-                cursor={false}
-              />
-            );
-          })}
+        {
+          // animationEnded &&
+          showResult &&
+            runStepsArray.map((shoe) => {
+              return (
+                <Text
+                  key={shoe}
+                  title={`${runSteps[shoe]}.`}
+                  className={cn(
+                    `text-6xl font-bold uppercase text-white leading-12`,
+                    selectedShoe[0] === shoe && "text-primary-pink"
+                  )}
+                />
+              );
+            })
+        }
+        {
+          // !animationEnded &&
+          !showResult &&
+            runStepsArray.map((shoe, index) => {
+              return (
+                <TypeAnimation
+                  key={shoe}
+                  sequence={[index * runStepDuration, `${runSteps[shoe]}.`]}
+                  wrapper="div"
+                  className={cn(
+                    "text-6xl font-bold uppercase text-white leading-12"
+                    // (selectedShoe.length > 1
+                    //   ? selectedShoe[index] === shoe
+                    //   : selectedShoe[0] === shoe)
+                  )}
+                  cursor={false}
+                />
+              );
+            })
+        }
         <Text
           title="Your Choice."
           className={cn(
@@ -241,7 +245,7 @@ export default function AnimatedText({
         <div className="hidden">
           <div ref={printSlipRef}>
             <Slip
-              shoeName={selectedWinnerShoe[0]}
+              shoeName={selectedShoe[0]}
               progressChartReading={progressChartReading}
             />
           </div>
