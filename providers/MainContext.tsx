@@ -501,7 +501,7 @@ export default function MainContextProvider({
 
     // Create a wrapper to control size
     const wrapper = document.createElement("div");
-    wrapper.style.width = "464px";
+    wrapper.style.width = "320px";
     wrapper.style.height = "787px";
     wrapper.style.position = "fixed";
     wrapper.style.right = "100%";
@@ -516,10 +516,11 @@ export default function MainContextProvider({
 
     // Render to canvas
     const canvas = await html2canvas(wrapper, {
-      width: 464,
+      width: 320,
       height: 787,
-      windowWidth: 464, // help ensure layout matches
+      windowWidth: 320, // help ensure layout matches
       windowHeight: 787,
+      scale: 3,
     });
 
     // Cleanup
