@@ -510,7 +510,7 @@ export default function MainContextProvider({
 
     // Create wrapper
     const wrapper = document.createElement("div");
-    wrapper.style.width = "320px";
+    wrapper.style.width = "300px";
     wrapper.style.height = "787px";
     wrapper.style.position = "fixed";
     wrapper.style.right = "100%";

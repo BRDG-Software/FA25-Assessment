@@ -35,7 +35,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
   return (
     <div
       id="slip-pdf"
-      className="w-[300px] h-[787px] flex justify-between px-2 overflow-hidden "
+      className="w-[280px] h-[787px] flex justify-between px-2 overflow-hidden "
     >
       {/* //left part */}
       {/* <SlipBorderIcon /> */}
