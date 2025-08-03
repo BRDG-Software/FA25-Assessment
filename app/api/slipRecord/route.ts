@@ -17,6 +17,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     }
 
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let existingData: any = [];
       const filePath = path.join(process.cwd(), "slipData", fileName);
 
@@ -31,6 +32,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
         fs.writeFileSync(fileName, JSON.stringify(existingData, null, 2));
       } else {
         const filePath = path.join(process.cwd(), "slipData", fileName);
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const fileContent: any = [content];
 
         fs.writeFile(

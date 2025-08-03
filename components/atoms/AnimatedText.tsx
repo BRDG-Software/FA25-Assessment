@@ -78,7 +78,7 @@ export default function AnimatedText({
         clearTimeout(typeAnimationEndedTimer);
       };
     }
-  }, [phase]);
+  }, [phase,calibrationDuration]);
 
   // console.log({ hasReturnedFromPrint });
   // useEffect(() => {

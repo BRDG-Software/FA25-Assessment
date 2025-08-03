@@ -491,46 +491,67 @@ export default function MainContextProvider({
     const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
     if (!pricingTableElmt) return;
 
-    const slipNo = updateCount(); //updates the receipt count on top
+    const slipNo = updateCount();
     await saveFile(slipNo);
+    await document.fonts.ready;
+
+    // Create temporary style fix for Tailwind CSS text shifting issue
+    const style = document.createElement("style");
+    document.head.appendChild(style);
+    style.sheet?.insertRule(
+      "body > div:last-child img { display: inline-block; }"
+    );
+    style.sheet?.insertRule("body > div:last-child * { line-height: normal; }");
 
     // Clone the element
     const copiedPricingTableElmt = pricingTableElmt.cloneNode(
       true
     ) as HTMLElement;
 
-    // Create a wrapper to control size
+    // Create wrapper
     const wrapper = document.createElement("div");
     wrapper.style.width = "320px";
     wrapper.style.height = "787px";
     wrapper.style.position = "fixed";
     wrapper.style.right = "100%";
-    wrapper.style.overflow = "hidden"; // Optional: crop content
-    wrapper.appendChild(copiedPricingTableElmt);
+    wrapper.style.top = "0";
+    wrapper.style.overflow = "hidden";
+    wrapper.style.background = "#fff";
+    wrapper.style.margin = "0";
+    wrapper.style.padding = "0";
 
-    // Apply size directly to the cloned element if needed
     copiedPricingTableElmt.style.width = "100%";
     copiedPricingTableElmt.style.height = "100%";
+    copiedPricingTableElmt.style.margin = "0";
+    copiedPricingTableElmt.style.padding = "0";
 
+    wrapper.appendChild(copiedPricingTableElmt);
     document.body.appendChild(wrapper);
+
+    // Small delay for layout stabilization
+    await new Promise((resolve) => setTimeout(resolve, 100));
 
     // Render to canvas
     const canvas = await html2canvas(wrapper, {
       width: 320,
       height: 787,
-      windowWidth: 320, // help ensure layout matches
+      windowWidth: 320,
       windowHeight: 787,
       scale: 3,
+      useCORS: true,
+      // letterRendering: true,
+      allowTaint: true,
     });
 
     // Cleanup
     wrapper.remove();
+    style.remove(); // Remove the temporary style fix
 
-    // Try BMP (browser support may vary)
     const id: string = uuidv4();
     const dataURL = canvas.toDataURL("image/bmp");
     downloadjs(dataURL, `${id}.bmp`, "image/bmp");
-    // to show redirection screen since there is no functionality that runs after user has closed the download popup or
+
+    // Delay to show splash and call backend
     setTimeout(async () => {
       setShowSplash(true);
       await fetch("/api/print", {
@@ -544,11 +565,12 @@ export default function MainContextProvider({
         }),
       });
     }, 3000);
+
+    // Reset app after another delay
     setTimeout(() => {
       handleReset();
     }, 6000);
   };
-
   const handleBack = () => {
     setBackHandler(true);
     if (selectedQuestion?.id === "q1") {

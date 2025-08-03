@@ -1,4 +1,3 @@
-import Logo from "@/public/assets/icons/SVG/logo.svg";
 import Divider from "../atoms/Divider";
 import React from "react";
 import DotsSvg from "@/icons/dots-svg";
@@ -6,7 +5,6 @@ import { shoeEnum, TLocalStorageCount } from "@/utils/types";
 import Text from "../atoms/Text";
 import VomeroIcon from "@/icons/vomero-svg";
 import StructureIcon from "@/icons/structure-svg";
-import NikeCornorIcon from "@/icons/nike-cornor.icon";
 import PegasusSvg from "@/icons/pegasus-svg";
 import RunLogoDark from "@/icons/run-logo-dark";
 import PerformanceBarChartSlip from "../atoms/PerformanceBarChartSlip";
@@ -53,7 +51,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                 .padStart(3, "0")}`}
               fontSize="!text-[10px]"
               fontWeight="font-medium"
-              className="uppercase"
+              className="uppercase w-max text-center"
               textColor="text-black"
             />
             <div className="flex justify-between items-center w-full">
@@ -80,28 +78,28 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                   fontSize="!text-sm"
                 />
                 <Text
-                  title="Your Choice"
+                  title="Your Choice."
                   className="mt-1 uppercase"
                   fontWeight="font-bold"
                   textColor="text-black"
                   fontSize="!text-sm"
                 />
               </div>
-              <div className="mt-[-10px]">
+              <div className="mt-[-13px]">
                 <RunLogoDark />
               </div>
             </div>
           </div>
           {/* calibration bar */}
-          <div className="flex flex-col gap-y-3">
-            <div className="flex flex-col ">
+          <div className="flex flex-col gap-y-3 -mt-2">
+            <div className="flex flex-col gap-y-1 ">
               <Divider height="h-[2px]" width="w-full" className="bg-black" />
-              <p className="!text-[10px] !font-bold text-black">
+              <p className="!text-[10px] text-black w-max text-center ">
                 CALIBRATION COMPLETE
               </p>
             </div>
             {/* graph */}
-            <div className="flex items-center justify-center mb-4">
+            <div className="flex items-center justify-center mb-4 mt-[-10px]">
               {/* <TripleDotGraph
                 structurePct={progressChartReading.Structure}
                 pegasusPct={progressChartReading.Pegasus}
@@ -138,9 +136,9 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
               )}
             </div>
             {/* result bar */}
-            <div className="flex flex-col ">
+            <div className="flex flex-col gap-y-1">
               <Divider height="h-[2px]" width="w-full" className="bg-black" />
-              <p className="!text-[10px] font-semibold text-black">RESULT</p>
+              <p className="text-[10px] text-black w-max text-center">RESULT</p>
             </div>
           </div>
 
@@ -158,16 +156,42 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                 ? selectedShoe.join(" & ")
                 : selectedShoe[0]}
             </h1> */}
-            <h1 className="text-black font-bold !text-4xl !-mt-4 !mb-12 !p-0">
-              {shoeName === shoeEnum.vomero
-                ? "VOMERO PLUS"
-                : shoeName === shoeEnum.pegasus
-                ? "PEGASUS PREMIUM"
-                : "STRUCTURE 26"}
-            </h1>
-            <div className="flex flex-col !mt-4">
+
+            <div className="w-max pr-2 -mt-2">
+              <p
+                className="text-black  w-max m-0"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "40px",
+                  lineHeight: "34px",
+                }}
+              >
+                {shoeName === shoeEnum.vomero
+                  ? "VOMERO"
+                  : shoeName === shoeEnum.pegasus
+                  ? "PEGASUS"
+                  : "STRUCTURE"}
+              </p>
+
+              <p
+                className="text-black w-max m-0"
+                style={{
+                  fontWeight: 400,
+                  fontSize: "40px",
+                  lineHeight: "34px",
+                  marginTop: "-15px",
+                }}
+              >
+                {shoeName === shoeEnum.vomero
+                  ? "PLUS"
+                  : shoeName === shoeEnum.pegasus
+                  ? "PREMIUM"
+                  : "26"}
+              </p>
+            </div>
+            <div className="flex flex-col gap-y-1 !mt-4">
               <Divider height="h-[2px]" width="w-full" className="bg-black" />
-              <p className="!text-[10px] font-semibold text-black">
+              <p className="!text-[10px] text-black w-max text-center">
                 MATCH PERCENTAGES
               </p>
             </div>
@@ -178,10 +202,12 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
           {/* here i need the performance chart can you use the same animated bar chart here */}
           <PerformanceBarChartSlip values={progressChartReading} />
 
-          <div className="flex flex-col gap-y-2">
+          <div className="flex flex-col gap-y-2 -mt-2">
             <Divider height="h-[2px]" width="w-full" className="bg-black" />
             <div className="flex items-center justify-between">
-              <DotsSvg />
+              <div className="mt-[-13px]">
+                <DotsSvg />
+              </div>
               <p className="!text-[6px] font-semibold text-black">
                 TRY ALL THREE
               </p>

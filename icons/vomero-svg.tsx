@@ -1,8 +1,8 @@
 export default function VomeroIcon() {
   return (
     <svg
-      width="144"
-      height="154"
+      width="184"
+      height="197"
       viewBox="0 0 144 154"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
