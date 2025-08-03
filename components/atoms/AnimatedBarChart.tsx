@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Text from "./Text";
+import { shoeEnum } from "@/utils/types";
 
 const BAR_HEIGHT = 40;
 const BAR_GAP = 10;
@@ -8,6 +9,12 @@ const BAR_WIDTH = 420;
 const STRIPE_COLOR = "#FF0c47";
 const STRIPE_BG = "#111";
 const BORDER_COLOR = "#fff";
+
+const LABELS: { key: shoeEnum; label: string }[] = [
+  { key: shoeEnum.vomero, label: "Vomero Plus" },
+  { key: shoeEnum.pegasus, label: "Pegasus Premium" },
+  { key: shoeEnum.structure, label: "Structure 26" },
+];
 
 const TRAITS = [
   { key: "comfort", label: "COMFORT" },
@@ -21,9 +28,13 @@ type AnimatedBarChartProps = {
     energy: number;
     response: number;
   };
+  slip?: boolean;
 };
 
-const AnimatedBarChart: React.FC<AnimatedBarChartProps> = ({ values }) => {
+const AnimatedBarChart: React.FC<AnimatedBarChartProps> = ({
+  values,
+  slip,
+}) => {
   const patternWidth = 12;
   const shimmerWidth = 10;
   // Calculate fill widths for all bars
@@ -49,31 +60,58 @@ const AnimatedBarChart: React.FC<AnimatedBarChartProps> = ({ values }) => {
       style={{ maxWidth: 650, minWidth: 0 }}
     >
       {/* Labels */}
-      <div>
-        <Text title="Feature Priority" className="uppercase font-medium mb-4" />
+      {slip ? (
         <div
-          className="flex flex-col justify-between h-full mr-6"
-          style={{ height: BAR_HEIGHT * 3 + BAR_GAP * 2, minWidth: 120 }}
+          className="flex flex-col text-base font-bold leading-none"
+          style={{ minWidth: 132, maxWidth: 132 }}
         >
-          {TRAITS.map((trait, i) => (
+          {LABELS.map((item, i) => (
             <div
-              key={trait.key}
-              className="flex items-center"
+              key={item.key}
               style={{
-                height: BAR_HEIGHT,
-                marginBottom: i < TRAITS.length - 1 ? BAR_GAP : 0,
+                height: BAR_HEIGHT + BAR_GAP,
+                display: "flex",
+                paddingBottom: 10,
+                alignItems: "center",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
             >
-              <span
-                className="font-medium text-white text-4xl leading-none tracking-tight"
-                style={{ fontFamily: "inherit", letterSpacing: "-0.04em" }}
-              >
-                {trait.label}
-              </span>
+              {item.label}
             </div>
           ))}
         </div>
-      </div>
+      ) : (
+        <div>
+          <Text
+            title="Feature Priority"
+            className="uppercase font-medium mb-4"
+          />
+          <div
+            className="flex flex-col justify-between h-full mr-6"
+            style={{ height: BAR_HEIGHT * 3 + BAR_GAP * 2, minWidth: 120 }}
+          >
+            {TRAITS.map((trait, i) => (
+              <div
+                key={trait.key}
+                className="flex items-center"
+                style={{
+                  height: BAR_HEIGHT,
+                  marginBottom: i < TRAITS.length - 1 ? BAR_GAP : 0,
+                }}
+              >
+                <span
+                  className="font-medium text-white text-4xl leading-none tracking-tight"
+                  style={{ fontFamily: "inherit", letterSpacing: "-0.04em" }}
+                >
+                  {trait.label}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       {/* Bars */}
       <div>
         <Text title="scale" className="uppercase  font-medium mb-4" />

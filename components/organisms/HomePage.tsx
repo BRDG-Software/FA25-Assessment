@@ -47,24 +47,6 @@ export default function HomePage() {
     setSelectedQuestion(questions[0]);
   }, [setSelectedQuestion]);
 
-  // =====================HANDLES==================
-
-  // const handleKeyDown = (e: React.KeyboardEvent) => {
-  //   if (e.key === "ArrowDown") {
-  //     setFocusedIdx((prev) => (prev + 1) % buttonRefs.length);
-  //     e.preventDefault();
-  //   } else if (e.key === "ArrowUp") {
-  //     setFocusedIdx(
-  //       (prev) => (prev - 1 + buttonRefs.length) % buttonRefs.length
-  //     );
-  //     e.preventDefault();
-  //   }
-  // };
-
-  //Charts
-
-  const [showResult, setShowResult] = useState(false);
-
   const handleSelect = (qIdx: number, oIdx: number, quesId: string) => {
     const newAnswers = [...answers];
     newAnswers[qIdx] = oIdx;
@@ -77,11 +59,6 @@ export default function HomePage() {
         setSelectedOption(null);
       }, 1000);
     }
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setShowResult(true);
   };
 
   // Calculate result
@@ -110,15 +87,6 @@ export default function HomePage() {
   const progress = Math.round(
     (total / (questionsLength ? 4 : questions.length)) * 100
   );
-
-  // ===============Effects========================
-
-  // =============After Questionaire Handlers===================
-  const handlePrint = () => {
-    // printSlipById("slip-pdf");
-
-    console.log("is this printing");
-  };
 
   return (
     <div className="p-6 w-[92%] flex items-center justify-center h-full m-auto">
@@ -154,13 +122,17 @@ export default function HomePage() {
             />
           ) : (
             <AnimatedText
-              onPrint={handlePrint}
               selectedShoe={maximumValue({
                 comfort: shoePercent.Structure,
                 energy: shoePercent.Pegasus,
                 response: shoePercent.Vomero,
               })}
               progressChartReading={shoePercent}
+              values={{
+                comfort: shoePercent.Structure,
+                energy: shoePercent.Pegasus,
+                response: shoePercent.Vomero,
+              }}
             />
           )}
         </div>

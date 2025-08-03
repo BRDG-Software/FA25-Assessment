@@ -10,11 +10,21 @@ import RunLogoDark from "@/icons/run-logo-dark";
 import PerformanceBarChartSlip from "../atoms/PerformanceBarChartSlip";
 import { getFromLocalStorage } from "@/utils/localstorage.util";
 import { SLIP_COUNT_KEY } from "@/utils/data";
+import AnimatedBarChart from "../atoms/AnimatedBarChart";
 interface Props {
   shoeName: string;
   progressChartReading: Record<shoeEnum, number>;
+  values: {
+    comfort: number;
+    energy: number;
+    response: number;
+  };
 }
-export default function Slip({ shoeName, progressChartReading }: Props) {
+export default function Slip({
+  shoeName,
+  progressChartReading,
+  values,
+}: Props) {
   const slipCount: TLocalStorageCount | null =
     getFromLocalStorage(SLIP_COUNT_KEY);
 
@@ -201,6 +211,7 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
 
           {/* here i need the performance chart can you use the same animated bar chart here */}
           <PerformanceBarChartSlip values={progressChartReading} />
+          {/* <AnimatedBarChart values={values} slip={true} /> */}
 
           <div className="flex flex-col gap-y-2 -mt-2">
             <Divider height="h-[2px]" width="w-full" className="bg-black" />

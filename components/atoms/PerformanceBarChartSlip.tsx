@@ -2,7 +2,7 @@ import React from "react";
 import { shoeEnum } from "@/utils/types";
 
 const BAR_HEIGHT = 17;
-const BAR_GAP = 2.8; // Slightly increased gap for better spacing
+const BAR_GAP = 2; // Reduced gap for tighter spacing
 const BAR_WIDTH = 100; // Increased width for better visibility
 const LABELS: { key: shoeEnum; label: string }[] = [
   { key: shoeEnum.vomero, label: "Vomero Plus" },
@@ -34,16 +34,18 @@ const PerformanceBarChartSlip: React.FC<PerformanceBarChartSlipProps> = ({
           <div
             key={item.key}
             style={{
-              height: BAR_HEIGHT + BAR_GAP,
+              height: BAR_HEIGHT + 2,
               display: "flex",
-              paddingBottom: 10,
+              paddingBottom: 5,
               alignItems: "center",
               whiteSpace: "nowrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
           >
-            {item.label}
+            <p style={{ color: "black", fontSize: "16px", paddingTop: 20 }}>
+              {item.label}
+            </p>
           </div>
         ))}
       </div>
@@ -57,23 +59,32 @@ const PerformanceBarChartSlip: React.FC<PerformanceBarChartSlipProps> = ({
           <pattern
             id="hatch"
             patternUnits="userSpaceOnUse"
+            x={1}
             width="3.1"
             height="6"
-            patternTransform="rotate(20)"
+            // patternTransform="rotate(20)"
+            patternTransform="skewX(-10)"
           >
             <rect x="0" y="0" width="2" height="6" fill="black" />
           </pattern>
         </defs>
         {LABELS.map((item, i) => {
           const y = i * (BAR_HEIGHT + BAR_GAP);
+          const fillWidth = fillWidths[i];
+          const width =
+            i === 0
+              ? fillWidth + 0.85
+              : i === 1
+              ? fillWidth - 0.7
+              : fillWidth - 2.2;
           return (
             <g key={item.key}>
               {/* Bar background */}
               <rect
-                x={0}
-                y={y}
-                width={BAR_WIDTH}
-                height={BAR_HEIGHT}
+                x={2}
+                y={y + 2}
+                width={BAR_WIDTH - 4}
+                height={BAR_HEIGHT - 4}
                 fill="white" // Tailwind bg-gray-700
                 rx={2}
               />
@@ -82,7 +93,7 @@ const PerformanceBarChartSlip: React.FC<PerformanceBarChartSlipProps> = ({
                 x={0}
                 y={y}
                 width={BAR_WIDTH}
-                height={BAR_HEIGHT}
+                height={BAR_HEIGHT - 4}
                 fill="none"
                 stroke="black"
                 strokeWidth={1.6}
@@ -92,8 +103,8 @@ const PerformanceBarChartSlip: React.FC<PerformanceBarChartSlipProps> = ({
               <rect
                 x={0}
                 y={y}
-                width={fillWidths[i]}
-                height={BAR_HEIGHT}
+                width={width}
+                height={BAR_HEIGHT - 4}
                 fill="url(#hatch)"
                 rx={2}
               />

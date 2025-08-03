@@ -12,13 +12,18 @@ import { useMainContext } from "@/providers/MainContext";
 
 type propsType = {
   selectedShoe: string[];
-  onPrint: () => void;
   progressChartReading: Record<string, number>; // Add this
+  values: {
+    comfort: number;
+    energy: number;
+    response: number;
+  };
 };
 
 export default function AnimatedText({
   selectedShoe,
   progressChartReading,
+  values,
 }: propsType) {
   const { printSlipRef, handlePrint, showSplash } = useMainContext();
   const [phase, setPhase] = useState<"calibration" | "run">("calibration");
@@ -28,9 +33,6 @@ export default function AnimatedText({
   const [hideText1, setHideText1] = useState<boolean>(false);
   const [hideText2, setHideText2] = useState<boolean>(false);
   const [animationEnded, setAnimationEnded] = useState<boolean>(false);
-
-  //================== hooks ==================
-  // const { handlePrint, printSlipRef, currentScreen } = useMainContext();
 
   //================== Animation durations ==================
   const calibrationDuration = calibrationSteps.length * 1300; // 1.2s per step
@@ -78,7 +80,7 @@ export default function AnimatedText({
         clearTimeout(typeAnimationEndedTimer);
       };
     }
-  }, [phase,calibrationDuration]);
+  }, [phase, calibrationDuration]);
 
   // console.log({ hasReturnedFromPrint });
   // useEffect(() => {
@@ -247,6 +249,7 @@ export default function AnimatedText({
             <Slip
               shoeName={selectedShoe[0]}
               progressChartReading={progressChartReading}
+              values={values}
             />
           </div>
         </div>
