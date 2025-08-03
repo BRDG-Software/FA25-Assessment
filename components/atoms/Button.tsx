@@ -13,6 +13,7 @@ interface propsType extends HTMLAttributes<HTMLButtonElement> {
   guidetext?: boolean;
   onClick?: () => void;
   selectedAnswer?: boolean;
+  disabled?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, propsType>(
@@ -24,6 +25,7 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
       guidetext = false,
       onClick,
       selectedAnswer,
+      disabled,
       ...props
     },
     ref
@@ -40,7 +42,8 @@ const Button = React.forwardRef<HTMLButtonElement, propsType>(
           className={cn(
             "border-solid border-2 border-white w-full py-2 rounded-full hover:bg-primary-pink hover:text-black hover:border-primary-pink  hover:duration-500",
             paddingHorizontal,
-            className
+            className,
+            disabled && "opacity-50 cursor-not-allowed"
           )}
           {...props}
         >

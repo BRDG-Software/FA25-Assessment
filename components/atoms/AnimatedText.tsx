@@ -25,7 +25,8 @@ export default function AnimatedText({
   progressChartReading,
   values,
 }: propsType) {
-  const { printSlipRef, handlePrint, showSplash } = useMainContext();
+  const { printSlipRef, handlePrint, showSplash, isPrinting, setIsPrinting } =
+    useMainContext();
   const [phase, setPhase] = useState<"calibration" | "run">("calibration");
   const [showPrintButton, setShowPrintButton] = useState(false);
   const [showChoiceText, setShowChoiceText] = useState<boolean>(false);
@@ -125,6 +126,14 @@ export default function AnimatedText({
   //   });
   //   return selectedArray;
   // }, [runStepsArray, selectedShoe]);
+
+  const handlePrinting = () => {
+    setIsPrinting(true);
+    handlePrint();
+    setTimeout(() => {
+      setIsPrinting(false);
+    }, 10000);
+  };
 
   if (showSplash) {
     return (
@@ -240,9 +249,10 @@ export default function AnimatedText({
         )}
       >
         <Button
-          title="PRINT"
+          title={isPrinting ? "Printing in Progress..." : "PRINT"}
+          disabled={isPrinting}
           className="mt-4 px-8 w-[320px] h-11 border-none py-2 rounded-full bg-primary-pink text-lg font-semibold shadow transition"
-          onClick={handlePrint}
+          onClick={handlePrinting}
         />
         <div className="hidden">
           <div ref={printSlipRef}>

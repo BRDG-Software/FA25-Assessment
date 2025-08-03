@@ -116,4 +116,6 @@ export interface IMainContext {
   handleRemoveOption: () => number | null;
   questionsLength: boolean;
   setQuestionsLength: Dispatch<SetStateAction<boolean>>;
+  isPrinting: boolean;
+  setIsPrinting: Dispatch<SetStateAction<boolean>>;
 }

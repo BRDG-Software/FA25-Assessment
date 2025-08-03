@@ -108,6 +108,7 @@ export default function MainContextProvider({
   const [currentScreen, setCurrentScreen] = useState(0);
   const [lastSocketEvent, setLastSocketEvent] = useState<string | null>(null);
   const [questionsLength, setQuestionsLength] = useState<boolean>(false);
+  const [isPrinting, setIsPrinting] = useState<boolean>(false);
 
   const [answers, setAnswers] = useState<(number | null)[]>(
     Array(questions.length).fill(null)
@@ -395,7 +396,7 @@ export default function MainContextProvider({
             }
           }
 
-          if (currentScreen === 3) {
+          if (currentScreen === 3 && !isPrinting) {
             handlePrint();
             ws?.send(JSON.stringify({ event: "printing" }));
             ws.send(
@@ -488,88 +489,97 @@ export default function MainContextProvider({
   }
 
   const handlePrint = async () => {
-    const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
-    if (!pricingTableElmt) return;
+    setIsPrinting(true);
+    try {
+      const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
+      if (!pricingTableElmt) return;
 
-    const slipNo = updateCount();
-    await saveFile(slipNo);
-    await document.fonts.ready;
+      const slipNo = updateCount();
+      await saveFile(slipNo);
+      await document.fonts.ready;
 
-    // Create temporary style fix for Tailwind CSS text shifting issue
-    const style = document.createElement("style");
-    document.head.appendChild(style);
-    style.sheet?.insertRule(
-      "body > div:last-child img { display: inline-block; }"
-    );
-    style.sheet?.insertRule("body > div:last-child * { line-height: normal; }");
+      // Create temporary style fix for Tailwind CSS text shifting issue
+      const style = document.createElement("style");
+      document.head.appendChild(style);
+      style.sheet?.insertRule(
+        "body > div:last-child img { display: inline-block; }"
+      );
+      style.sheet?.insertRule(
+        "body > div:last-child * { line-height: normal; }"
+      );
 
-    // Clone the element
-    const copiedPricingTableElmt = pricingTableElmt.cloneNode(
-      true
-    ) as HTMLElement;
+      // Clone the element
+      const copiedPricingTableElmt = pricingTableElmt.cloneNode(
+        true
+      ) as HTMLElement;
 
-    // Create wrapper
-    const wrapper = document.createElement("div");
-    wrapper.style.width = "303.5px";
-    wrapper.style.height = "787px";
-    wrapper.style.position = "fixed";
-    wrapper.style.right = "100%";
-    wrapper.style.top = "0";
-    wrapper.style.overflow = "hidden";
-    wrapper.style.background = "#fff";
-    wrapper.style.margin = "0";
-    wrapper.style.padding = "0";
+      // Create wrapper
+      const wrapper = document.createElement("div");
+      wrapper.style.width = "303.5px";
+      wrapper.style.height = "787px";
+      wrapper.style.position = "fixed";
+      wrapper.style.right = "100%";
+      wrapper.style.top = "0";
+      wrapper.style.overflow = "hidden";
+      wrapper.style.background = "#fff";
+      wrapper.style.margin = "0";
+      wrapper.style.padding = "0";
 
-    copiedPricingTableElmt.style.width = "100%";
-    copiedPricingTableElmt.style.height = "100%";
-    copiedPricingTableElmt.style.margin = "0";
-    copiedPricingTableElmt.style.padding = "0";
+      copiedPricingTableElmt.style.width = "100%";
+      copiedPricingTableElmt.style.height = "100%";
+      copiedPricingTableElmt.style.margin = "0";
+      copiedPricingTableElmt.style.padding = "0";
 
-    wrapper.appendChild(copiedPricingTableElmt);
-    document.body.appendChild(wrapper);
+      wrapper.appendChild(copiedPricingTableElmt);
+      document.body.appendChild(wrapper);
 
-    // Small delay for layout stabilization
-    await new Promise((resolve) => setTimeout(resolve, 100));
+      // Small delay for layout stabilization
+      await new Promise((resolve) => setTimeout(resolve, 100));
 
-    // Render to canvas
-    const canvas = await html2canvas(wrapper, {
-      width: 303.5,
-      height: 787,
-      windowWidth: 303.5,
-      windowHeight: 787,
-      scale: 2,
-      useCORS: true,
-      // letterRendering: true,
-      allowTaint: true,
-    });
-
-    // Cleanup
-    wrapper.remove();
-    style.remove(); // Remove the temporary style fix
-
-    const id: string = uuidv4();
-    const dataURL = canvas.toDataURL("image/bmp");
-    downloadjs(dataURL, `${id}.bmp`, "image/bmp");
-
-    // Delay to show splash and call backend
-    setTimeout(async () => {
-      setShowSplash(true);
-      await fetch("/api/print", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          exePath: process.env.NEXT_PUBLIC_SCRIPT_PATH as string,
-          bmpPath: `${
-            process.env.NEXT_PUBLIC_DOWNLOAD_PATH as string
-          }${id}.bmp`,
-        }),
+      // Render to canvas
+      const canvas = await html2canvas(wrapper, {
+        width: 303.5,
+        height: 787,
+        windowWidth: 303.5,
+        windowHeight: 787,
+        scale: 2,
+        useCORS: true,
+        // letterRendering: true,
+        allowTaint: true,
       });
-    }, 3000);
 
-    // Reset app after another delay
-    setTimeout(() => {
-      handleReset();
-    }, 6000);
+      // Cleanup
+      wrapper.remove();
+      style.remove(); // Remove the temporary style fix
+
+      const id: string = uuidv4();
+      const dataURL = canvas.toDataURL("image/bmp");
+      downloadjs(dataURL, `${id}.bmp`, "image/bmp");
+
+      // Delay to show splash and call backend
+      setTimeout(async () => {
+        setShowSplash(true);
+        await fetch("/api/print", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            exePath: process.env.NEXT_PUBLIC_SCRIPT_PATH as string,
+            bmpPath: `${
+              process.env.NEXT_PUBLIC_DOWNLOAD_PATH as string
+            }${id}.bmp`,
+          }),
+        });
+      }, 3000);
+
+      // Reset app after another delay
+      setTimeout(() => {
+        handleReset();
+      }, 6000);
+    } catch (err) {
+      console.log("Failed to print", err);
+    } finally {
+      setIsPrinting(false);
+    }
   };
   const handleBack = () => {
     setBackHandler(true);
@@ -655,6 +665,8 @@ export default function MainContextProvider({
     handleRemoveOption,
     questionsLength,
     setQuestionsLength,
+    isPrinting,
+    setIsPrinting,
   };
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 }
