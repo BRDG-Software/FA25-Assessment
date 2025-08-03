@@ -533,11 +533,11 @@ export default function MainContextProvider({
 
     // Render to canvas
     const canvas = await html2canvas(wrapper, {
-      width: 320,
+      width: 300,
       height: 787,
-      windowWidth: 320,
+      windowWidth: 300,
       windowHeight: 787,
-      scale: 3,
+      scale: 2,
       useCORS: true,
       // letterRendering: true,
       allowTaint: true,
