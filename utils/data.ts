@@ -96,6 +96,7 @@ export const questions: questionsTypes[] = [
 ];
 
 export const calibrationSteps: string[] = [
+  "CALIBRATION IN PROGRESS",
   "CALCULATING WEATHER PREFERENCES",
   "assessing Run companion compatibility",
   "analyzing stride",
