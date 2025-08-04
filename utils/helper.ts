@@ -17,11 +17,11 @@ export const maximumValue = (value: any) => {
 
   const shoeValues = shoeType.map((item: string) => {
     if (item === "comfort") {
-      return "Structure";
+      return "Vomero";
     } else if (item === "energy") {
       return "Pegasus";
     } else {
-      return "Vomero";
+      return "Structure";
     }
   });
   return shoeValues;

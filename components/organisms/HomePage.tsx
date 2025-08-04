@@ -123,15 +123,15 @@ export default function HomePage() {
           ) : (
             <AnimatedText
               selectedShoe={maximumValue({
-                comfort: shoePercent.Structure,
+                comfort: shoePercent.Vomero,
                 energy: shoePercent.Pegasus,
-                response: shoePercent.Vomero,
+                response: shoePercent.Structure,
               })}
               progressChartReading={shoePercent}
               values={{
-                comfort: shoePercent.Structure,
+                comfort: shoePercent.Vomero,
                 energy: shoePercent.Pegasus,
-                response: shoePercent.Vomero,
+                response: shoePercent.Structure,
               }}
             />
           )}
@@ -160,9 +160,9 @@ export default function HomePage() {
         <ChartSection
           progress={progress}
           values={{
-            comfort: shoePercent.Structure,
+            comfort: shoePercent.Vomero,
             energy: shoePercent.Pegasus,
-            response: shoePercent.Vomero,
+            response: shoePercent.Structure,
           }}
           structurePct={shoePercent.Structure}
           pegasusPct={shoePercent.Pegasus}
