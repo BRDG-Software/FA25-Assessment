@@ -14,9 +14,9 @@ export const enum SocketEventEnum {
   KNOB = "knob",
   PRINTING = "printing",
   SCREEN_NUMBER = "screen_number",
-  METER1 = "meter_1",
-  METER2 = "meter_2",
-  METER3 = "meter_3",
+  METER1 = "meter1",
+  METER2 = "meter2",
+  METER3 = "meter3",
 }
 
 export enum layoutEnum {

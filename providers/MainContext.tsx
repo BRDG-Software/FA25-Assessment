@@ -66,6 +66,8 @@ export const MainContext = createContext<IMainContext>({
   handleRemoveOption: () => null,
   questionsLength: false,
   setQuestionsLength: () => {},
+  isPrinting: false,
+  setIsPrinting: () => {},
 });
 export const useMainContext = () => useContext(MainContext);
 
@@ -150,7 +152,6 @@ export default function MainContextProvider({
     useState<homePageTabsEnum>(homePageTabsEnum.questionareTab);
 
   const handleReset = () => {
-    console.log("logging");
     setSelectedTab(layoutEnum.landingPage);
     setShowSplash(false);
     setCurrentScreen(0);
@@ -188,7 +189,6 @@ export default function MainContextProvider({
 
   useEffect(() => {
     if (showSplash) {
-      console.log("showSplash fired");
       const timer = setTimeout(() => {
         handleReset();
       }, 2000);
@@ -228,7 +228,6 @@ export default function MainContextProvider({
 
   useEffect(() => {
     if (selectedHomePageTab === homePageTabsEnum.animatedText) {
-      console.log("is ref fired");
       setCurrentScreen(3);
       visitedRef.current = 3;
     }
@@ -264,15 +263,25 @@ export default function MainContextProvider({
   }, []); // Empty dependency array - only runs once on mount
 
   // Separate effect for handling WebSocket events
+
+  const remapByRemovedOption: Record<number, Record<number, number>> = {
+    0: {
+      0: 1, // removed → fallback
+      1: 2, // now acts as index 2
+    },
+    1: {
+      0: 0,
+      1: 2, // removed → fallback
+    },
+    2: {
+      0: 0,
+      1: 1,
+      2: 1, // removed → fallback
+    },
+  };
   useEffect(() => {
     const ws = wsRef.current;
     if (!ws) return;
-
-    console.log(
-      removeOptionRef.current,
-      "removeOptionRef.current is useEffect"
-    );
-    console.log(removeOption, "Remove option is useEffect");
 
     const handleStartScreen = (event: MessageEvent) => {
       try {
@@ -306,9 +315,31 @@ export default function MainContextProvider({
           }
 
           if (currentScreen === 1) {
-            //this means i am on the questionaire screen
-            const value = data.value - 1;
-            setHighlightedIdx(value); // the value it will listen is between 1-3 so that means it will be choosing between any of the 3 values, but we are storing, 0,1,2 respectively for the answers
+            let value = data.value - 1;
+
+            if (removeOption === 0) {
+              if (value === 0) {
+                setHighlightedIdx(1);
+                return;
+              }
+              if (value === 1) {
+                setHighlightedIdx(2);
+                return;
+              }
+            }
+
+            if (removeOption === 2) {
+              if (value === 0) {
+                setHighlightedIdx(0);
+                return;
+              }
+              if (value === 1) {
+                setHighlightedIdx(1);
+                return;
+              }
+            }
+
+            setHighlightedIdx(value);
           }
         }
 
@@ -318,6 +349,7 @@ export default function MainContextProvider({
             if (selectedQuestion?.id === "q1") {
               setSelectedTab(layoutEnum.landingPage);
               setCurrentScreen(0);
+              setAnswers([]);
               ws?.send(
                 JSON.stringify({
                   event: SocketEventEnum.SCREEN_NUMBER,
@@ -353,26 +385,52 @@ export default function MainContextProvider({
             setCurrentScreen(2);
             visitedRef.current = 2;
             instructionsBtnRef.current?.click();
-            console.log("inside instruction button", highlightedIdx);
           }
 
           if (currentScreen === 1) {
             questionaireRefs[highlightedIdx].current?.click();
             const qIdx = findIndex(selectedQuestion?.id) + 3;
+            console.log({ qIdx });
+
+            // if (removeOption) {
+            //   switch (removeOption) {
+            //     case 0: {
+            //       ws.send(
+            //         JSON.stringify({
+            //           event: SocketEventEnum.METER1,
+            //           value: meter1,
+            //         })
+            //       );
+            //       ws.send(
+            //         JSON.stringify({ event: SocketEventEnum.METER2, value: 1 })
+            //       );
+            //       ws.send(
+            //         JSON.stringify({
+            //           event: SocketEventEnum.METER3,
+            //           value: meter3,
+            //         })
+            //       );
+            //     }
+            //   }
+            // }
+
             // To send meter1 value:
-            ws.send(JSON.stringify({ event: "meter1", value: meter1 }));
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.METER1, value: meter1 })
+            );
 
             // To send meter2 value:
-            ws.send(JSON.stringify({ event: "meter2", value: meter2 }));
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.METER2, value: meter2 })
+            );
 
             // To send meter3 value:
-            ws.send(JSON.stringify({ event: "meter3", value: meter3 }));
+            ws.send(
+              JSON.stringify({ event: SocketEventEnum.METER3, value: meter3 })
+            );
 
             if (qIdx === 7) return;
             const tempRemoveOption = handleRemoveOption();
-            console.log(tempRemoveOption, "tro");
-            console.log(removeOptionRef.current, "removeOptionRef");
-
             // For qIdx === 6, add a small delay to ensure state is updated
             if (qIdx === 6) {
               setTimeout(() => {
@@ -396,15 +454,15 @@ export default function MainContextProvider({
             }
           }
 
-          if (currentScreen === 3 && !isPrinting) {
-            handlePrint();
-            ws?.send(JSON.stringify({ event: "printing" }));
-            ws.send(
-              JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
-            );
+          // if (currentScreen === 3 && !isPrinting) {
+          //   handlePrint();
+          //   ws?.send(JSON.stringify({ event: "printing" }));
+          //   ws.send(
+          //     JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
+          //   );
 
-            console.log("printing");
-          }
+          //   console.log("printing");
+          // }
         }
       } catch (err) {
         console.log("Failed to parse event.data", event.data, err);
@@ -489,7 +547,7 @@ export default function MainContextProvider({
   }
 
   const handlePrint = async () => {
-    setIsPrinting(true);
+    // setIsPrinting(true);
     try {
       const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
       if (!pricingTableElmt) return;
@@ -577,15 +635,17 @@ export default function MainContextProvider({
       }, 6000);
     } catch (err) {
       console.log("Failed to print", err);
-    } finally {
-      setIsPrinting(false);
     }
+    // } finally {
+    //   setIsPrinting(false);
+    // }
   };
   const handleBack = () => {
     setBackHandler(true);
     if (selectedQuestion?.id === "q1") {
       setSelectedTab(layoutEnum.landingPage);
       setCurrentScreen(0);
+      setAnswers([]);
     } else {
       setSelectedQuestion(questions[findIndex(selectedQuestion.id) - 1]);
     }
@@ -622,7 +682,7 @@ export default function MainContextProvider({
         setSelectedHomePageTab(homePageTabsEnum.animatedText);
       }
     }
-    console.log(tempOption, "inside handle Remove function");
+
     removeOptionRef.current = tempOption;
     return tempOption;
   }, [answers]);

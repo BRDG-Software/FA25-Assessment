@@ -127,13 +127,27 @@ export default function AnimatedText({
   //   return selectedArray;
   // }, [runStepsArray, selectedShoe]);
 
-  const handlePrinting = () => {
+  useEffect(() => {
     setIsPrinting(true);
-    handlePrint();
-    setTimeout(() => {
+    if (showPrintButton && isPrinting) {
+      handlePrint();
+    }
+    return () => {
       setIsPrinting(false);
-    }, 10000);
-  };
+    };
+  }, [isPrinting, showPrintButton]);
+
+  // const handlePrinting = () => {
+  //   setIsPrinting(true);
+  //   if (isPrinting) {
+  //     return;
+  //   } else {
+  //     handlePrint();
+  //   }
+  //   // setTimeout(() => {
+  //   //   setIsPrinting(false);
+  //   // }, 10000);
+  // };
 
   if (showSplash) {
     return (
@@ -249,10 +263,11 @@ export default function AnimatedText({
         )}
       >
         <Button
-          title={isPrinting ? "Printing in Progress..." : "PRINT"}
+          title={"Printing in Progress..."}
           disabled={isPrinting}
+          
           className="mt-4 px-8 w-[320px] h-11 border-none py-2 rounded-full bg-primary-pink text-lg font-semibold shadow transition"
-          onClick={handlePrinting}
+          // onClick={handlePrinting}
         />
         <div className="hidden">
           <div ref={printSlipRef}>

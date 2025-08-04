@@ -32,7 +32,7 @@ const ChartSection = ({
         id="trial-assesment"
       >
         {/* <ProgressChart progress={progress} /> */}
-        <CircularProgressSVG progress={progress} />
+        <CircularProgressSVG progress={progress > 100 ? 100 : progress} />
         <Video values={values} />
       </section>
       <Divider height="h-[2px]" width="w-full" />

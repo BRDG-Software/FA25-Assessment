@@ -1,4 +1,4 @@
-import { homePageTabsEnum, optionTypes, questionsTypes } from "@/utils/types";
+import { optionTypes, questionsTypes } from "@/utils/types";
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
 import Button from "../atoms/Button";
 import Text from "../atoms/Text";
@@ -26,12 +26,11 @@ const QuestionareSection = ({
     highlightedIdx,
     questionaireRefs,
     setHighlightedIdx,
-    setCurrentScreen,
+    removeOption,
+    handleRemoveOption,
+    setRemoveOption,
   } = useMainContext();
   const [hoverOption, setHoverOption] = useState<number | null>(null);
-
-  const { removeOption, handleRemoveOption, setRemoveOption } =
-    useMainContext();
 
   const triggerHover = (oIdx: number) => {
     setHoverOption(oIdx);
@@ -43,6 +42,7 @@ const QuestionareSection = ({
     handleSelect(qIdx, oIdx, quesId);
   };
 
+  console.log({ highlightedIdx });
   // useEffect(() => {
   //   const questionareTimer = setTimeout(() => {
   //     setSelectedTab(layoutEnum.landingPage);
@@ -53,12 +53,15 @@ const QuestionareSection = ({
   //   };
   // }, [setSelectedTab]);
 
+  console.log({ removeOption });
+
   useEffect(() => {
     const removeOption = handleRemoveOption();
 
     setRemoveOption(removeOption);
   }, [answers, selectedOption]);
 
+  console.log({ answers });
   return (
     <motion.div
       key={selectedQuestion.id}

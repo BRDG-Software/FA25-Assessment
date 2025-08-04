@@ -5,8 +5,8 @@ const BAR_HEIGHT = 17;
 const BAR_GAP = 2; // Reduced gap for tighter spacing
 const BAR_WIDTH = 100; // Increased width for better visibility
 const LABELS: { key: shoeEnum; label: string }[] = [
-  { key: shoeEnum.vomero, label: "Vomero Plus" },
   { key: shoeEnum.pegasus, label: "Pegasus Premium" },
+  { key: shoeEnum.vomero, label: "Vomero Plus" },
   { key: shoeEnum.structure, label: "Structure 26" },
 ];
 

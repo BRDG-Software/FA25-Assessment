@@ -8,16 +8,16 @@ export const questions: questionsTypes[] = [
     text: "Your ideal running weather is…",
     options: [
       {
-        label: "A / Crisp and cool—perfect for focus",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / Light fog—like running through a dream",
+        label: "A / Light fog—like running through a dream",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / Music and the sound of your breath",
+        label: "B / Music and the sound of your breath",
         shoe: shoeEnum.vomero,
+      },
+      {
+        label: "C / Crisp and cool—perfect for focus",
+        shoe: shoeEnum.structure,
       },
     ],
   },
@@ -26,16 +26,16 @@ export const questions: questionsTypes[] = [
     text: "WHAT’S YOUR IDEAL RUNNING COMPANION?",
     options: [
       {
-        label: "A / A coach for focus",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / A hype friend to push limits",
+        label: "A / A hype friend to push limits",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / Music and the sound of your breath",
+        label: "B / Music and the sound of your breath",
         shoe: shoeEnum.vomero,
+      },
+      {
+        label: "C / A coach for focus",
+        shoe: shoeEnum.structure,
       },
     ],
   },
@@ -44,16 +44,16 @@ export const questions: questionsTypes[] = [
     text: "How do you want your stride to feel?",
     options: [
       {
-        label: "A / Gears kicking into place",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / Electric and energized",
+        label: "A / Electric and energized",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / Plush and effortless",
+        label: "B / Plush and effortless",
         shoe: shoeEnum.vomero,
+      },
+      {
+        label: "C / Gears kicking into place",
+        shoe: shoeEnum.structure,
       },
     ],
   },
@@ -62,16 +62,16 @@ export const questions: questionsTypes[] = [
     text: "If your run had a color palette, it would be…",
     options: [
       {
-        label: "A / Earth tones—grounded and reliable",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / Neon pops—bold and electric",
+        label: "A / Neon pops—bold and electric",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / Soft gradients—calm and dreamy",
+        label: "B / Soft gradients—calm and dreamy",
         shoe: shoeEnum.vomero,
+      },
+      {
+        label: "C / Earth tones—grounded and reliable",
+        shoe: shoeEnum.structure,
       },
     ],
   },
@@ -80,16 +80,16 @@ export const questions: questionsTypes[] = [
     text: "When you imagine your perfect run, it feels like...",
     options: [
       {
-        label: "A / A smooth, rhythmic flow that locks you in",
-        shoe: shoeEnum.structure,
-      },
-      {
-        label: "B / A surge of energy that launches you forward",
+        label: "A / A surge of energy that launches you forward",
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "C / A soft glide that makes the miles melt away",
+        label: "B / A soft glide that makes the miles melt away",
         shoe: shoeEnum.vomero,
+      },
+      {
+        label: "C / A smooth, rhythmic flow that locks you in",
+        shoe: shoeEnum.structure,
       },
     ],
   },

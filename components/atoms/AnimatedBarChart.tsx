@@ -17,8 +17,8 @@ const LABELS: { key: shoeEnum; label: string }[] = [
 ];
 
 const TRAITS = [
-  { key: "comfort", label: "COMFORT" },
   { key: "energy", label: "ENERGY" },
+  { key: "comfort", label: "COMFORT" },
   { key: "response", label: "RESPONSE" },
 ];
 
