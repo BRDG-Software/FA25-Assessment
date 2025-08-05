@@ -12,7 +12,7 @@ export const questions: questionsTypes[] = [
         shoe: shoeEnum.pegasus,
       },
       {
-        label: "B / Music and the sound of your breath",
+        label: "B / Sunny with a breeze - let's go fast",
         shoe: shoeEnum.vomero,
       },
       {
