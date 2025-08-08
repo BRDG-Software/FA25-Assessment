@@ -103,12 +103,10 @@ export interface IMainContext {
   selectedHomePageTab: homePageTabsEnum;
   printSlipRef: RefObject<null>;
   handlePrint: UseReactToPrintFn;
-
+  preRenderPrintContent: () => Promise<void>;
   showSplash: boolean;
   setShowSplash: Dispatch<SetStateAction<boolean>>;
-
   wsRef: React.RefObject<WebSocket | null>;
-
   setAnswers: Dispatch<SetStateAction<(number | null)[]>>;
   answers: (number | null)[];
   removeOption: number | null;
@@ -118,4 +116,15 @@ export interface IMainContext {
   setQuestionsLength: Dispatch<SetStateAction<boolean>>;
   isPrinting: boolean;
   setIsPrinting: Dispatch<SetStateAction<boolean>>;
+  handleReset: () => void;
 }
+
+export type actionTypes = {
+  [key: string]: number;
+};
+
+export type eventTypes = {
+  page: number;
+  action: actionTypes;
+  value: number;
+};

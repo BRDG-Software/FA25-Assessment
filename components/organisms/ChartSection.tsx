@@ -1,5 +1,4 @@
 import React from "react";
-import ProgressChart from "../atoms/ProgressChart";
 import Video from "../atoms/Video";
 import Divider from "../atoms/Divider";
 import AnimatedBarChart from "../atoms/AnimatedBarChart";
@@ -31,7 +30,6 @@ const ChartSection = ({
         className="flex items-center justify-center gap-24 pl-8 py-6"
         id="trial-assesment"
       >
-        {/* <ProgressChart progress={progress} /> */}
         <CircularProgressSVG progress={progress > 100 ? 100 : progress} />
         <Video values={values} />
       </section>

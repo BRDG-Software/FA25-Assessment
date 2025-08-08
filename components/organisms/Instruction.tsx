@@ -1,24 +1,10 @@
-import React, { useEffect } from "react";
-
+import React from "react";
 import Text from "../atoms/Text";
 import { GoPlus } from "react-icons/go";
 import Divider from "../atoms/Divider";
 import DotComponent from "../atoms/DotComponent";
-import { useMainContext } from "@/providers/MainContext";
-import { layoutEnum } from "@/utils/types";
 
 const Instruction = () => {
-  const { selectedTab, setSelectedTab } = useMainContext();
-
-  // useEffect(() => {
-  //   const instructionTimeOut = setTimeout(() => {
-  //     setSelectedTab(layoutEnum.landingPage);
-  //   }, 30000);
-  //   return () => {
-  //     clearTimeout(instructionTimeOut);
-  //   };
-  // }, [setSelectedTab]);
-
   return (
     <div className="p-6 w-[92%] flex flex-col items-center h-full m-auto">
       <div className="flex justify-between items-center h-full w-full ">

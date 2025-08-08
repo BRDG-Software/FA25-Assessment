@@ -5,8 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "node server.js",
+    "dev:monitored": "node process-manager-entry.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
+    "start:monitored": "NODE_ENV=production node process-manager-entry.js",
+    "test:restart": "node test-restart.js",
     "lint": "next lint"
   },
   "dependencies": {

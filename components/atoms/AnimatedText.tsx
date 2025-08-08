@@ -3,7 +3,7 @@
 import { calibrationSteps, runSteps } from "@/utils/data";
 import { cn } from "@/utils/helper";
 import { TypeAnimation } from "react-type-animation";
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { shoeEnum } from "@/utils/types";
 import Text from "./Text";
@@ -25,15 +25,20 @@ export default function AnimatedText({
   progressChartReading,
   values,
 }: propsType) {
-  const { printSlipRef, handlePrint, showSplash, isPrinting, setIsPrinting } =
-    useMainContext();
+  const {
+    printSlipRef,
+    handlePrint,
+    preRenderPrintContent,
+    showSplash,
+    handleReset,
+    isPrinting,
+    setIsPrinting,
+  } = useMainContext();
   const [phase, setPhase] = useState<"calibration" | "run">("calibration");
   const [showPrintButton, setShowPrintButton] = useState(false);
   const [showChoiceText, setShowChoiceText] = useState<boolean>(false);
   const [showResult, setShowResult] = useState<boolean>(false);
-  const [hideText1, setHideText1] = useState<boolean>(false);
-  const [hideText2, setHideText2] = useState<boolean>(false);
-  const [animationEnded, setAnimationEnded] = useState<boolean>(false);
+  const [startPrinting, setStartPrinting] = useState<boolean>(false);
 
   //================== Animation durations ==================
   const calibrationDuration = calibrationSteps.length * 1300; // 1.2s per step
@@ -46,108 +51,71 @@ export default function AnimatedText({
       return () => clearTimeout(timer);
     }
     if (phase === "run") {
-      // Show print button after all run step animations are done
-      const timer = setTimeout(
-        () => setShowPrintButton(true),
-        runStepsArray.length * (runStepDuration + 1300)
-      );
       const textTimer = setTimeout(
         () => setShowChoiceText(true),
-        runStepsArray.length * (runStepDuration + 900)
-      );
-      const resultTimer = setTimeout(
-        () => setShowResult(true),
-        runStepsArray.length * (runStepDuration + 1050)
-      );
-      const hideText1Timer = setTimeout(
-        () => setHideText1(true),
         runStepsArray.length * (runStepDuration + 500)
       );
-      const hideText2Timer = setTimeout(
-        () => setHideText2(true),
+
+      const resultTimer = setTimeout(
+        () => setShowResult(true),
+        runStepsArray.length * (runStepDuration + 550)
+      );
+
+      const timer = setTimeout(
+        () => setShowPrintButton(true),
         runStepsArray.length * (runStepDuration + 800)
       );
-      const typeAnimationEndedTimer = setTimeout(
-        () => setAnimationEnded(true),
-        runStepsArray.length * runStepDuration
+
+      const printingTimer = setTimeout(
+        () => setStartPrinting(true),
+        runStepsArray.length * (runStepDuration + 400)
+      );
+
+      const resetTimer = setTimeout(
+        () => handleReset(),
+        runStepsArray.length * (runStepDuration + 3000) // Reduced from 6000 to 3000 since print is faster
       );
 
       return () => {
         clearTimeout(timer);
         clearTimeout(textTimer);
         clearTimeout(resultTimer);
-        clearTimeout(hideText1Timer);
-        clearTimeout(hideText2Timer);
-        clearTimeout(typeAnimationEndedTimer);
+        clearTimeout(printingTimer);
+        clearTimeout(resetTimer);
       };
     }
   }, [phase, calibrationDuration]);
 
-  // console.log({ hasReturnedFromPrint });
-  // useEffect(() => {
-  //   const handleFocus = () => {
-  //     if (isPrinting) {
-  //       setIsPrinting(false);
-  //       setHasReturnedFromPrint(true);
-  //       setShowSplash(true); // Add this line
-  //     }
-  //   };
+  // Trigger pre-rendering when run animations start
+  useEffect(() => {
+    if (phase === "run" && !showResult) {
+      // Start pre-rendering when the shoe animations begin
+      const preRenderTimer = setTimeout(() => {
+        preRenderPrintContent();
+      }, 500); // Small delay to let animations start
 
-  //   window.addEventListener("focus", handleFocus);
-  //   return () => window.removeEventListener("focus", handleFocus);
-  // }, [isPrinting]);
-
-  // Add this new useEffect
-
-  // console.log({ showSplash });
-  // useEffect(() => {
-  //   if (showPrintButton) {
-  //     setTimeout(() => {
-  //       setSelectedTab(layoutEnum.landingPage);
-  //     }, 45000);
-  //   }
-  // }, [showPrintButton]);
-
-  // const unSelectedShoe = useMemo(() => {
-  //   const unSelected = runStepsArray.filter(
-  //     (item) => !selectedShoe.includes(item)
-  //   );
-  //   return unSelected;
-  // }, [runStepsArray, selectedShoe]);
-
-  // const selectedWinnerShoe = useMemo(() => {
-  //   const selectedArray: shoeEnum[] = [];
-  //   runStepsArray.forEach((shoe) => {
-  //     selectedShoe.forEach((item) => {
-  //       if (item === shoe) {
-  //         selectedArray.push(shoe);
-  //       }
-  //     });
-  //   });
-  //   return selectedArray;
-  // }, [runStepsArray, selectedShoe]);
+      return () => clearTimeout(preRenderTimer);
+    }
+  }, [phase, showResult, preRenderPrintContent]);
 
   useEffect(() => {
-    setIsPrinting(true);
-    if (showPrintButton && isPrinting) {
+    if (startPrinting) {
       handlePrint();
     }
     return () => {
-      setIsPrinting(false);
+      setStartPrinting(false);
     };
-  }, [isPrinting, showPrintButton]);
+  }, [startPrinting]);
 
-  // const handlePrinting = () => {
+  // useEffect(() => {
   //   setIsPrinting(true);
-  //   if (isPrinting) {
-  //     return;
-  //   } else {
+  //   if (showPrintButton && isPrinting) {
   //     handlePrint();
   //   }
-  //   // setTimeout(() => {
-  //   //   setIsPrinting(false);
-  //   // }, 10000);
-  // };
+  //   return () => {
+  //     setIsPrinting(false);
+  //   };
+  // }, [isPrinting, showPrintButton]);
 
   if (showSplash) {
     return (
@@ -185,28 +153,6 @@ export default function AnimatedText({
   return (
     <div className="h-full flex flex-col mt-10 items-start space-y-6 pl-5 py-6">
       <div className="space-y-6 w-full">
-        {/* {animationEnded &&
-          selectedWinnerShoe.map((item) => {
-            return (
-              <Text
-                key={item}
-                title={`${runSteps[item]}.`}
-                className={cn(
-                  `text-6xl font-bold uppercase text-white leading-12 ${
-                    showResult && "text-primary-pink"
-                  }`
-                )}
-              />
-            );
-          })} */}
-
-        {/* these are the styling below done earlier */}
-        {/* ${
-                    hideText1 &&
-                    index === 1 &&
-                    "opacity-0 duration-700 -translate-x-32"
-                  } */}
-        {/* ${hideText2 && index === 0 && "opacity-0 duration-700 -translate-x-32"} */}
         {
           // animationEnded &&
           showResult &&
@@ -234,9 +180,6 @@ export default function AnimatedText({
                   wrapper="div"
                   className={cn(
                     "text-6xl font-bold uppercase text-white leading-12"
-                    // (selectedShoe.length > 1
-                    //   ? selectedShoe[index] === shoe
-                    //   : selectedShoe[0] === shoe)
                   )}
                   cursor={false}
                 />
@@ -265,18 +208,19 @@ export default function AnimatedText({
         <Button
           title={"Printing in Progress..."}
           disabled={isPrinting}
-          
           className="mt-4 px-8 w-[320px] h-11 border-none py-2 rounded-full bg-primary-pink text-lg font-semibold shadow transition"
           // onClick={handlePrinting}
         />
-        <div className="hidden">
-          <div ref={printSlipRef}>
-            <Slip
-              shoeName={selectedShoe[0]}
-              progressChartReading={progressChartReading}
-              values={values}
-            />
-          </div>
+      </div>
+
+      {/*================== Hidden Slip component for pre-rendering ==================*/}
+      <div className="hidden">
+        <div ref={printSlipRef}>
+          <Slip
+            shoeName={selectedShoe[0]}
+            progressChartReading={progressChartReading}
+            values={values}
+          />
         </div>
       </div>
     </div>

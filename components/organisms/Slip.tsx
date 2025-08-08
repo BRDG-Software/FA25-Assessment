@@ -10,7 +10,7 @@ import RunLogoDark from "@/icons/run-logo-dark";
 import PerformanceBarChartSlip from "../atoms/PerformanceBarChartSlip";
 import { getFromLocalStorage } from "@/utils/localstorage.util";
 import { SLIP_COUNT_KEY } from "@/utils/data";
-import AnimatedBarChart from "../atoms/AnimatedBarChart";
+
 interface Props {
   shoeName: string;
   progressChartReading: Record<shoeEnum, number>;
@@ -20,37 +20,15 @@ interface Props {
     response: number;
   };
 }
-export default function Slip({
-  shoeName,
-  progressChartReading,
-  values,
-}: Props) {
+export default function Slip({ shoeName, progressChartReading }: Props) {
   const slipCount: TLocalStorageCount | null =
     getFromLocalStorage(SLIP_COUNT_KEY);
-
-  const entries = Object.entries(progressChartReading || {}) as [
-    shoeEnum,
-    number
-  ][];
-
-  const maxValue = Math.max(...entries.map(([, val]) => val));
-
-  const topEntries = entries.filter(([, val]) => val === maxValue);
-
-  // const selectedShoe: shoeEnum[] =
-  //   topEntries.length >= 2
-  //     ? [topEntries[0][0], topEntries[1][0]]
-  //     : [topEntries[0][0]];
 
   return (
     <div
       id="slip-pdf"
-      className="w-[283px] h-[787px] flex justify-between px-2 overflow-hidden "
+      className="w-[270px] h-[787px] flex justify-between px-2 overflow-hidden "
     >
-      {/* //left part */}
-      {/* <SlipBorderIcon /> */}
-      {/* <NikeCornorIcon /> */}
-
       {/* center part */}
       <div className="w-full flex flex-col  px-5 ">
         <div className="flex flex-col h-full gap-y-7 overflow-hidden">
@@ -110,38 +88,11 @@ export default function Slip({
             </div>
             {/* graph */}
             <div className="flex items-center justify-center mb-4 mt-[-10px]">
-              {/* <TripleDotGraph
-                structurePct={progressChartReading.Structure}
-                pegasusPct={progressChartReading.Pegasus}
-                vomeroPct={progressChartReading.Vomero}
-              /> */}
-
               {shoeName === shoeEnum.vomero ? (
-                // <img
-                //   src={VomeroSvg}
-                //   height={100}
-                //   width={100}
-                //   crossOrigin="anonymous"
-                //   alt="vomero"
-                // />
                 <VomeroIcon />
               ) : shoeName === shoeEnum.pegasus ? (
-                // <img
-                //   src={PegasusSvg}
-                //   height={100}
-                //   width={100}
-                //   crossOrigin="anonymous"
-                //   alt="pagasus"
-                // />
                 <PegasusSvg />
               ) : (
-                // <img
-                //   src={StructureSvg}
-                //   height={100}
-                //   width={100}
-                //   alt="structure"
-                //   crossOrigin="anonymous"
-                // />
                 <StructureIcon />
               )}
             </div>
@@ -154,18 +105,6 @@ export default function Slip({
 
           <div className="flex flex-col">
             {/* HERE WOULD COME THE NAME OF THE SHOE */}
-            {/* <h1
-              className={cn(
-                "text-wrap font-semibold uppercase",
-                selectedShoe.length === 2
-                  ? "text-3xl tracking-wider"
-                  : "text-6xl"
-              )}
-            >
-              {selectedShoe.length > 1
-                ? selectedShoe.join(" & ")
-                : selectedShoe[0]}
-            </h1> */}
 
             <div className="w-max pr-2 -mt-2">
               <p
@@ -211,8 +150,6 @@ export default function Slip({
 
           {/* here i need the performance chart can you use the same animated bar chart here */}
           <PerformanceBarChartSlip values={progressChartReading} />
-          {/* <AnimatedBarChart values={values} slip={true} /> */}
-
           <div className="flex flex-col gap-y-2 -mt-2">
             <Divider height="h-[2px]" width="w-full" className="bg-black" />
             <div className="flex items-center justify-between">
@@ -226,9 +163,6 @@ export default function Slip({
           </div>
         </div>
       </div>
-
-      {/* right part */}
-      {/* <NikeCornorIcon /> */}
     </div>
   );
 }

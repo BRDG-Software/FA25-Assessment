@@ -1,6 +1,6 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tw-merge";
-import { shoePercentTypes } from "./types";
+import { eventTypes, shoePercentTypes } from "./types";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -55,4 +55,26 @@ export const logEvent = ({
   }
 };
 
+export const eventLogger = async ({ page, action, value }: eventTypes) => {
+  const content = {
+    page,
+    action,
+    value,
+    createdAt: new Date(),
+  };
 
+  const response = await fetch("/api/eventLogger", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      page,
+      action,
+      value,
+      createdAt: new Date(),
+    }),
+  });
+
+  const data = await response.json();
+};

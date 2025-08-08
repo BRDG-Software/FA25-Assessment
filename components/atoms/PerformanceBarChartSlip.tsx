@@ -43,7 +43,7 @@ const PerformanceBarChartSlip: React.FC<PerformanceBarChartSlipProps> = ({
               textOverflow: "ellipsis",
             }}
           >
-            <p style={{ color: "black", fontSize: "16px", paddingTop: 20 }}>
+            <p style={{ color: "black", fontSize: "15px", paddingTop: 15 }}>
               {item.label}
             </p>
           </div>

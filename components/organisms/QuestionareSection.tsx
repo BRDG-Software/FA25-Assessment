@@ -42,26 +42,12 @@ const QuestionareSection = ({
     handleSelect(qIdx, oIdx, quesId);
   };
 
-  console.log({ highlightedIdx });
-  // useEffect(() => {
-  //   const questionareTimer = setTimeout(() => {
-  //     setSelectedTab(layoutEnum.landingPage);
-  //   }, 90000);
-
-  //   return () => {
-  //     clearTimeout(questionareTimer);
-  //   };
-  // }, [setSelectedTab]);
-
-  console.log({ removeOption });
-
   useEffect(() => {
     const removeOption = handleRemoveOption();
 
     setRemoveOption(removeOption);
   }, [answers, selectedOption]);
 
-  console.log({ answers });
   return (
     <motion.div
       key={selectedQuestion.id}

@@ -52,7 +52,7 @@ export const questions: questionsTypes[] = [
         shoe: shoeEnum.vomero,
       },
       {
-        label: "C / Gears kicking into place",
+        label: "C / Gears clicking into place",
         shoe: shoeEnum.structure,
       },
     ],

@@ -1,15 +1,22 @@
 import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
+import { eventTypes } from "@/utils/types";
 
 export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {
     const body = await req.json();
-    const { fileName, content } = body as { fileName: string; content: string };
+    const { page, action, value } = body as eventTypes;
+    console.log(page, "page");
 
-    if (!fileName || !content) {
+    if (
+      page == null ||
+      action == null ||
+      action.eventTriggered == null ||
+      value == null
+    ) {
       return new Response(
-        JSON.stringify({ error: "Filename and content are required." }),
+        JSON.stringify({ error: "page, action and value are required." }),
         {
           status: 400,
         }
@@ -19,7 +26,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     try {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       let existingData: any = [];
-      const filePath = path.join(process.cwd(), "slipData", fileName);
+      const filePath = path.join(process.cwd(), "events", "userEvents.json");
 
       const fileExist = fs.existsSync(filePath);
 
@@ -28,12 +35,13 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
         existingData = prevContent ? JSON.parse(prevContent) : [];
 
-        existingData.push(content);
+        existingData.push(body);
+
         fs.writeFileSync(filePath, JSON.stringify(existingData, null, 2));
       } else {
-        const filePath = path.join(process.cwd(), "slipData", fileName);
+        const filePath = path.join(process.cwd(), "events", "userEvents.json");
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        const fileContent: any = [content];
+        const fileContent: any = [body];
 
         fs.writeFile(
           filePath,

@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { GoPlus } from "react-icons/go";
 import Button from "../atoms/Button";
 import Text from "../atoms/Text";
@@ -9,8 +9,7 @@ import Logo from "@/assets/images/runlogolight.svg";
 
 import { cn } from "@/utils/helper";
 import { useMainContext } from "@/providers/MainContext";
-import { layoutEnum, shoeEnum } from "@/utils/types";
-import Slip from "./Slip";
+import { layoutEnum } from "@/utils/types";
 
 type propsType = {
   setSelectedTab: React.Dispatch<React.SetStateAction<layoutEnum>>;
@@ -34,19 +33,11 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
   }, [animatingIdx, setAnimatingIdx]);
 
   const handleTabChange = () => {
-    // setSplashEffect(true);
-    // setTimeout(() => {
     setSelectedTab(layoutEnum.appLayout);
-    // }, 3000);
   };
 
   return (
-    <div
-      className={cn(
-        // `relative m-0 p-0 ${splashEffect && "bg-[#bd2342] h-screen w-screen"}`
-        `relative m-0 p-0  h-screen w-screen`
-      )}
-    >
+    <div className={cn(`relative m-0 p-0  h-screen w-screen`)}>
       <video
         src={"/assets/White_on_dark_red.mp4"}
         autoPlay
@@ -60,22 +51,11 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
         className={`m-16 border-solid border-2  w-[92%] rounded-4xl h-[85%] absolute top-0 p-8 flex flex-col justify-between ${"border-white"}`}
       >
         <div className="flex justify-between items-center">
-          <GoPlus
-            size={65}
-            // color={`${splashEffect && "black"}`}
-          />
+          <GoPlus size={65} />
           <div>
-            {/* {splashEffect ? (
-              <Image src={LogoDark} height={100} width={100} alt="run" />
-            ) : (
-              <Image src={Logo} height={100} width={100} alt="run" />
-            )} */}
             <Image src={Logo} height={100} width={100} alt="run" />
           </div>
-          <GoPlus
-            size={65}
-            //  color={`${splashEffect && "black"}`}
-          />
+          <GoPlus size={65} />
         </div>
         <div className="flex flex-col items-center">
           <Text

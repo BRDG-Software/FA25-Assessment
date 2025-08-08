@@ -1,0 +1,7658 @@
+[
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T18:15:44.011Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T18:15:44.341Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T18:15:59.653Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T18:16:00.779Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T18:16:02.230Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T18:16:02.720Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T18:16:04.218Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T18:16:05.891Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-05T18:16:06.306Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T18:17:03.542Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T18:17:04.033Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:21:16.867Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:21:16.507Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:21:47.654Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:21:49.797Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:21:51.700Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:21:52.203Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:21:53.839Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-05T19:21:54.326Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-05T19:21:56.563Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:21:57.173Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:26:01.872Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:03.571Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:05.015Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:05.661Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:08.752Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:10.210Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:11.136Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-05T19:26:13.090Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:27:15.639Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-05T19:27:17.328Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:12:39.918Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:12:40.194Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:12:39.537Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.179Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.689Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.727Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.758Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.789Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.820Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.852Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.883Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.914Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.945Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:09.976Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:13:10.008Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:15:24.715Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:17:58.214Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:17:58.482Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:18:07.036Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:18:08.029Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:18:09.682Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:18:20.964Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:18:22.102Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:18:23.833Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:19:05.943Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:19:05.944Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:19:05.945Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:19:07.323Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:22:27.077Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:22:27.445Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:22:34.827Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:22:36.186Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:22:37.469Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:22:37.811Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:22:39.386Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T15:22:39.794Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T15:22:41.657Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:23:48.214Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:49.639Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:50.891Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:51.058Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:52.492Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:52.678Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:54.088Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:54.254Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:23:56.030Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:35.375Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.884Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.886Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.887Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.888Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.889Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.890Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:24:42.892Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:24:50.433Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:26:12.360Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:26:12.677Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:26:18.823Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:19.819Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:21.212Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:21.407Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:22.973Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:23.192Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:26:24.580Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T15:26:24.743Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:26:54.677Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:26:55.133Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:27:04.089Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:05.199Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:06.737Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:06.904Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:08.772Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:10.472Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:12.622Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:39.356Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:27:39.808Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:28:05.022Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:05.768Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:07.464Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:08.038Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:09.413Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:10.877Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:11.313Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:28:13.988Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:33.940Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:33.942Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.878Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.878Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.883Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.882Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.880Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.879Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.884Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.885Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.886Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.887Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.888Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.888Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.890Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.891Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.892Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.893Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.894Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.895Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.895Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T15:28:35.896Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:29:20.167Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:21.003Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:22.460Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:22.660Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:24.185Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:24.450Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:26.051Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:26.372Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:29:28.058Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:33:30.245Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:31.244Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:32.740Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:34.232Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:34.513Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:36.318Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:33:38.015Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:34:09.315Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:34:09.824Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:34:09.856Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:34:09.890Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:34:09.896Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:40:29.992Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:40:30.366Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:40:52.060Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:40:53.178Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:40:54.796Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:40:56.711Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:40:58.632Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:41:00.746Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:41:33.303Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:42:44.908Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:48:29.871Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:48:30.197Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:48:35.513Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:36.528Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:38.378Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:40.179Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:40.546Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:42.503Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:48:44.342Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:48:51.479Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:50:32.057Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:50:32.360Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:50:38.640Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:50:39.476Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:50:41.517Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:50:43.282Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:50:45.017Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:50:47.067Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:50:50.058Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:54:06.650Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:54:06.954Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:54:10.546Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:54:56.412Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:54:56.763Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:55:02.189Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:55:03.580Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:55:05.457Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:55:07.482Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:55:08.685Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T15:55:08.957Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T15:55:10.684Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:55:11.223Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:55:44.009Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:56:38.380Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:56:38.748Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:56:46.264Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:47.118Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:49.471Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:49.894Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:51.814Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:53.705Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T15:56:55.568Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T15:57:28.681Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:01:14.043Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:01:14.552Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:01:14.584Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:01:14.598Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:01:22.615Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:01:23.321Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:01:24.900Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:01:27.639Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T16:01:28.018Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T16:01:29.736Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:01:30.064Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:02:01.017Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:03:02.878Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:03:03.297Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:03:08.659Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:10.080Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:11.371Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:11.599Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:13.229Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:14.799Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:15.124Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:03:17.395Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:03:50.659Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:04:15.315Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:04:15.759Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:04:22.835Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:24.032Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:26.048Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:26.267Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:27.966Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:28.431Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:04:29.940Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T16:04:30.290Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:10:38.210Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:10:38.714Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:10:46.052Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:11:39.070Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:11:39.378Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:12:43.793Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:44.947Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:46.460Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:48.191Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:50.642Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:52.950Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:55.425Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:12:57.213Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:13:00.103Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:14:56.574Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:14:57.080Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:15:34.381Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:15:34.728Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:15:42.848Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:43.916Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:45.319Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:45.773Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:47.497Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:47.901Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:51.486Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:53.364Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:15:57.273Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:16:37.536Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:17:39.239Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:17:39.442Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:17:50.438Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:17:52.502Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:17:54.621Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:17:56.629Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:17:58.986Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:18:01.272Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:18:41.330Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:19:32.804Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:19:33.295Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:19:44.680Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:19:45.849Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:19:47.607Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:19:48.797Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:19:50.498Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T16:19:52.551Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T16:19:54.375Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T16:19:54.916Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T16:20:40.428Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:22:12.115Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:22:11.808Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:22:30.060Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:31.406Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:33.179Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:35.104Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:35.589Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:38.001Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T17:22:38.783Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T17:22:40.444Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:22:42.057Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:23:22.210Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:25:50.553Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:25:52.473Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:25:52.660Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:26:43.862Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:26:46.516Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:26:46.738Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:26:56.460Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:26:58.944Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:27:01.053Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:27:03.027Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:27:04.938Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:27:07.455Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:27:10.034Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:27:51.506Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:29:40.158Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:39:27.231Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:39:28.671Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:39:29.087Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:39:45.318Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:39:45.813Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:39:45.844Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:39:45.875Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:40:00.871Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:40:02.789Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:40:04.888Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:40:08.823Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:40:12.199Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:40:16.683Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T17:40:56.682Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-07T17:40:56.684Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:47:34.594Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:47:35.097Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:47:35.128Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:47:35.146Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:49:35.933Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:49:38.594Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:49:40.878Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:49:42.931Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:49:44.588Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:49:46.762Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:01.908Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.559Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.403Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.433Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.464Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.497Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.527Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.589Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.620Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.651Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.682Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:02.711Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:52:18.738Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:21.463Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:24.392Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:24.912Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:27.269Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:27.896Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:31.083Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:52:34.590Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T17:52:35.343Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:53:15.875Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:53:46.455Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:53:46.958Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:53:46.989Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:53:47.007Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:54:00.348Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:03.703Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:06.783Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:08.746Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:11.055Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:11.597Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T17:54:14.151Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T17:54:14.654Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T17:54:54.143Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:58.131Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:58.162Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:58.193Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:58.225Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:58.233Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:22:57.626Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:23:16.898Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:23:19.997Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:23:23.095Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:23:23.803Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:23:29.337Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:23:30.239Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:23:41.091Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:24:29.524Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:24:54.394Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:24:54.898Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:24:54.932Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:24:54.935Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:25:31.839Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:32.947Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:35.287Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:35.818Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:37.478Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:38.036Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:39.851Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:40.408Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:25:45.379Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:35.945Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:46.847Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.352Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.382Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.413Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.447Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.479Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.509Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.541Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.572Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.665Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.603Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.637Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.697Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.728Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.759Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.790Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.821Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:47.853Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:26:48.153Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:28:13.542Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:30:03.918Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:30:04.126Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:30:19.363Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:20.788Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:23.342Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:26.423Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:28.982Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:31.709Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:34.123Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:34.661Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:30:37.250Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:31:17.200Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.116Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.619Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.650Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.685Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.713Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.744Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.774Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.807Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.837Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.870Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.900Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.931Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.971Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:17.994Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.025Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.056Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.087Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.121Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.153Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.194Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.215Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.247Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.277Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.309Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.340Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.371Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.402Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.433Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.465Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.496Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.527Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.558Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.589Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.624Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.656Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.686Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.718Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.750Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.780Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.812Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.849Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.879Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.909Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.941Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:18.970Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.002Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.034Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.066Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.095Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.130Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.160Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.191Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.229Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.254Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.287Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.319Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.352Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.380Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.412Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.440Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.470Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.502Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.534Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.564Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.597Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.629Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.661Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.691Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.723Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.756Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.785Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.817Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.848Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.879Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.910Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.941Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:19.973Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.005Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.037Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.068Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.100Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.134Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.165Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.197Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.228Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.259Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.290Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.329Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.350Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.383Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.416Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.445Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.477Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.509Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.537Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.568Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.600Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.634Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.665Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.699Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.729Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.758Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.790Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.825Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.854Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.885Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.917Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.947Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:20.978Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.010Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.041Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.071Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.103Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.139Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.169Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.201Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.234Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.262Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.295Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.326Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.356Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.387Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.418Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.450Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.482Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.514Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.549Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.582Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.609Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.643Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.677Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.706Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.734Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.765Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.795Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.829Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.860Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.889Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.922Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.951Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:21.983Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.014Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.046Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.080Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.110Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.144Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.181Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.207Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.238Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.271Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.300Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.334Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.365Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.394Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.426Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.458Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.488Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.518Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.556Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.583Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.610Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.645Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.676Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.707Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.738Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.770Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.800Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.833Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.864Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.895Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.927Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.959Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:22.991Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.023Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.053Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.084Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.116Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.151Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.185Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.215Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.249Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.274Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.304Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.335Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.366Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.398Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.428Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.467Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.493Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.522Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.553Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.588Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.618Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.650Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.681Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.711Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.743Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.774Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.805Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.837Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.869Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.900Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.931Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.962Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:23.994Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.029Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.059Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.092Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.120Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.152Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.186Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.214Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.245Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.277Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.313Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.340Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.370Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.402Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.435Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.466Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.498Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.528Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.560Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.596Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.622Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.656Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.688Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.719Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.753Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.782Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.813Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.856Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.876Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.907Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.940Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.967Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:24.999Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.029Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.061Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.192Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.194Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.197Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.199Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.227Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.250Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.282Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.314Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.346Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.378Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.407Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.439Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.471Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.501Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.536Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.567Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.598Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.629Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.660Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.693Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.725Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.756Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.791Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.819Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.851Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.886Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.912Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.944Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:25.977Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.003Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.035Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.066Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.097Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.129Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.160Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.194Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.224Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.255Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.288Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.320Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.352Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.383Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.414Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.447Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.477Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.508Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.539Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.571Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.601Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.633Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.663Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.700Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.732Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.760Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.793Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.825Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.857Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:26.887Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:30.567Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.071Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.102Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.133Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.165Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.197Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.232Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.262Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.295Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.325Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.357Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.388Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.419Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.450Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.482Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.512Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.544Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.574Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.605Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.636Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.667Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.699Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.732Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.764Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.795Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.825Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.857Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.888Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.919Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.951Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:31.956Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:42.632Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:34:42.830Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:35:00.053Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:01.217Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:04.437Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:05.314Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:06.687Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:08.452Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:10.447Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:35:13.540Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:35:16.002Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:36:40.394Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:36:40.851Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:36:41.157Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:36:41.507Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:36:41.868Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:36:42.203Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:36:42.524Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:36:42.875Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:40:30.982Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:32.505Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:35.064Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:38.268Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:39.358Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:41.929Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:40:45.133Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:43:11.670Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:43:11.389Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-07T18:43:28.205Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:43:30.188Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:43:32.449Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:43:32.930Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-07T18:43:35.502Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:43:35.983Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:43:40.208Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 2,
+    "createdAt": "2025-08-07T18:44:16.393Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:24:12.054Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:24:12.207Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:17.438Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:17.582Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:18.341Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:18.796Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:21.393Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:22.077Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:24:22.332Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:24:22.807Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:23.040Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:23.432Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:23.613Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:24:23.748Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:24:24.104Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:24:24.185Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:49:59.527Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:49:59.719Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:04.035Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:04.206Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:05.146Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:50:05.974Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:50:06.589Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:06.715Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:06.995Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:07.328Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:07.965Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:50:08.131Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:50:08.562Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:08.790Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:08.921Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:09.356Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:09.519Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:09.780Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:51.068Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:51.855Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:51.855Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:52.098Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:52.994Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:50:53.791Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:51:00.830Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:51:06.280Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:53:15.204Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:53:15.180Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:53:15.445Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:54:15.491Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:54:15.505Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:54:16.011Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:54:17.749Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:54:17.878Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:18.343Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:18.489Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:18.956Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:19.095Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:19.521Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:19.713Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:19.911Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:54:20.381Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:54:20.823Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:21.297Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:21.320Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:21.885Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:22.347Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:22.522Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:54:22.780Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T01:54:40.659Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T01:54:40.772Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T01:54:40.997Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T01:54:41.576Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T01:55:01.013Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:56:01.671Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T01:56:01.901Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:02.303Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:02.452Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:02.841Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:03.043Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:03.475Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:03.651Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:03.834Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:04.078Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:04.241Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:04.454Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:04.596Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:56:04.769Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:56:04.954Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:05.079Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:05.210Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:05.377Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:05.815Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:05.937Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:06.155Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:06.310Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T01:56:06.667Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:56:06.828Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:56:07.196Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T01:56:30.620Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:00:38.945Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:00:39.032Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:00:39.240Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:00:44.339Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:00:44.466Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:45.290Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:45.387Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:45.851Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:00:46.003Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:00:46.177Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:46.446Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:46.619Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:46.772Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:46.864Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:47.205Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:47.309Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:47.617Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:48.009Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:00:48.047Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:00:48.371Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:48.513Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:48.771Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:48.880Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:49.634Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:00:49.762Z"
+  },
+  {
+    "page": 3,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 3,
+    "createdAt": "2025-08-08T02:01:23.897Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:01:26.980Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:33.815Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:33.815Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:33.967Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:45.889Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:45.937Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:46.074Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:46.874Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:46.927Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:47.072Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:54.620Z"
+  },
+  {
+    "page": 0,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 0,
+    "createdAt": "2025-08-08T02:04:54.790Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:55.537Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:55.749Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:56.220Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:56.430Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:56.770Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:57.063Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:57.191Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:57.374Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:57.590Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:57.779Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:57.899Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:58.079Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:58.157Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:58.347Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 3
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:58.495Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:58.679Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 2,
+    "createdAt": "2025-08-08T02:04:58.772Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:58.981Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 2
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:59.153Z"
+  },
+  {
+    "page": 1,
+    "action": {
+      "eventTriggered": 1
+    },
+    "value": 1,
+    "createdAt": "2025-08-08T02:04:59.274Z"
+  }
+]

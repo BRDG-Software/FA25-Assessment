@@ -29,13 +29,6 @@ const AppLayout = ({ children, className, Logo = LogoLight }: propsType) => {
         )}
       >
         <div className="w-[90%] mx-auto flex justify-center relative items-center pb-5 border-b-2  border-white">
-          {/* {selectedHomePageTab !== homePageTabsEnum.animatedText && (
-            <IoArrowBackCircle
-              size={50}
-              className="absolute left-0 cursor-pointer z-50"
-              onClick={() => handleBack()}
-            />
-          )} */}
           <Image
             src={Logo}
             alt="logo"

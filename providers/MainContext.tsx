@@ -1,6 +1,6 @@
 "use client";
 import { SLIP_COUNT_KEY, questions } from "@/utils/data";
-import { findIndex } from "@/utils/helper";
+import { eventLogger, findIndex } from "@/utils/helper";
 import {
   IMainContext,
   SocketEventEnum,
@@ -11,7 +11,6 @@ import {
   questionsTypes,
 } from "@/utils/types";
 import downloadjs from "downloadjs";
-import { number } from "framer-motion";
 import html2canvas from "html2canvas";
 import { v4 as uuidv4 } from "uuid";
 import {
@@ -68,6 +67,7 @@ export const MainContext = createContext<IMainContext>({
   setQuestionsLength: () => {},
   isPrinting: false,
   setIsPrinting: () => {},
+  handleReset: () => {},
 });
 export const useMainContext = () => useContext(MainContext);
 
@@ -110,7 +110,13 @@ export default function MainContextProvider({
   const [currentScreen, setCurrentScreen] = useState(0);
   const [lastSocketEvent, setLastSocketEvent] = useState<string | null>(null);
   const [questionsLength, setQuestionsLength] = useState<boolean>(false);
-  const [isPrinting, setIsPrinting] = useState<boolean>(false);
+  const [isPrinting, setIsPrinting] = useState(false);
+  const [showSplash, setShowSplash] = useState(false);
+  const [isPreRendering, setIsPreRendering] = useState(false);
+  const [preRenderedCanvas, setPreRenderedCanvas] =
+    useState<HTMLCanvasElement | null>(null);
+  const [preRenderedId, setPreRenderedId] = useState<string | null>(null);
+  const [hasPrinted, setHasPrinted] = useState(false);
 
   const [answers, setAnswers] = useState<(number | null)[]>(
     Array(questions.length).fill(null)
@@ -125,7 +131,6 @@ export default function MainContextProvider({
     questions[0]
   );
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
-  const [showSplash, setShowSplash] = useState(false);
 
   const questionaireRefs = Array.from({ length: MAX_HIGHLIGHT_INDEX }, () =>
     useRef<HTMLButtonElement>(null)
@@ -160,6 +165,11 @@ export default function MainContextProvider({
     setAnswers([]);
     setSelectedQuestion(questions[0]);
     setSelectedHomePageTab(homePageTabsEnum.questionareTab);
+    // Reset print-related states
+    setHasPrinted(false);
+    setPreRenderedCanvas(null);
+    setPreRenderedId(null);
+    setIsPreRendering(false);
     if (wsRef.current && wsRef.current.readyState === WebSocket.OPEN)
       wsRef.current.send(
         JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
@@ -283,7 +293,7 @@ export default function MainContextProvider({
     const ws = wsRef.current;
     if (!ws) return;
 
-    const handleStartScreen = (event: MessageEvent) => {
+    const handleStartScreen = async (event: MessageEvent) => {
       try {
         const data: TSocketPayload = JSON.parse(event.data);
 
@@ -299,6 +309,7 @@ export default function MainContextProvider({
             ws.send(
               JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
             );
+
             // visitedRef.current = 0;
             return;
           }
@@ -392,28 +403,6 @@ export default function MainContextProvider({
             const qIdx = findIndex(selectedQuestion?.id) + 3;
             console.log({ qIdx });
 
-            // if (removeOption) {
-            //   switch (removeOption) {
-            //     case 0: {
-            //       ws.send(
-            //         JSON.stringify({
-            //           event: SocketEventEnum.METER1,
-            //           value: meter1,
-            //         })
-            //       );
-            //       ws.send(
-            //         JSON.stringify({ event: SocketEventEnum.METER2, value: 1 })
-            //       );
-            //       ws.send(
-            //         JSON.stringify({
-            //           event: SocketEventEnum.METER3,
-            //           value: meter3,
-            //         })
-            //       );
-            //     }
-            //   }
-            // }
-
             // To send meter1 value:
             ws.send(
               JSON.stringify({ event: SocketEventEnum.METER1, value: meter1 })
@@ -430,7 +419,7 @@ export default function MainContextProvider({
             );
 
             if (qIdx === 7) return;
-            const tempRemoveOption = handleRemoveOption();
+
             // For qIdx === 6, add a small delay to ensure state is updated
             if (qIdx === 6) {
               setTimeout(() => {
@@ -453,23 +442,13 @@ export default function MainContextProvider({
               );
             }
           }
-
-          // if (currentScreen === 3 && !isPrinting) {
-          //   handlePrint();
-          //   ws?.send(JSON.stringify({ event: "printing" }));
-          //   ws.send(
-          //     JSON.stringify({ event: SocketEventEnum.SCREEN_NUMBER, value: 1 })
-          //   );
-
-          //   console.log("printing");
-          // }
         }
       } catch (err) {
         console.log("Failed to parse event.data", event.data, err);
       }
     };
 
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = async (e: KeyboardEvent) => {
       if (ws.readyState !== WebSocket.OPEN) return;
 
       if (e.key === "ArrowRight") {
@@ -482,7 +461,6 @@ export default function MainContextProvider({
         );
       }
       if (e.key === "1") {
-        console.log("in 1 body");
         ws.send(JSON.stringify({ event: SocketEventEnum.KNOB, value: 1 }));
       }
       if (e.key === "2") {
@@ -491,6 +469,21 @@ export default function MainContextProvider({
       if (e.key === "3") {
         ws.send(JSON.stringify({ event: SocketEventEnum.KNOB, value: 3 }));
       }
+
+      await eventLogger({
+        page: currentScreen,
+        action: {
+          eventTriggered:
+            e.key === "ArrowRight" || e.key === "ArrowLeft"
+              ? 1
+              : e.key === "1"
+              ? 1
+              : e.key === "2"
+              ? 2
+              : 3,
+        },
+        value: highlightedIdx || currentScreen,
+      });
     };
 
     ws.onmessage = handleStartScreen;
@@ -532,7 +525,7 @@ export default function MainContextProvider({
   }, [answers, meter1, meter2, meter3, currentScreen, lastSocketEvent]);
 
   async function saveFile(slipNo: number) {
-    const fileName = "slipData.txt";
+    const fileName = "slipData.json";
     const content = JSON.stringify({ slipNo, createdAt: new Date() });
 
     const response = await fetch("/api/slipRecord", {
@@ -546,17 +539,52 @@ export default function MainContextProvider({
     const data = await response.json();
   }
 
-  const handlePrint = async () => {
-    // setIsPrinting(true);
-    try {
-      const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
-      if (!pricingTableElmt) return;
+  // Pre-render function that runs during animations
+  const preRenderPrintContent = async () => {
+    if (isPreRendering || preRenderedCanvas) {
+      console.log(
+        "🔄 Pre-rendering skipped - already in progress or completed"
+      );
+      return; // Already pre-rendering or done
+    }
 
+    setIsPreRendering(true);
+    console.log("🔄 Starting pre-render during animations...");
+
+    try {
+      // Step 1: Find element
+      const step1Start = performance.now();
+      const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
+      if (!pricingTableElmt) {
+        console.log("❌ Element #slip-pdf not found for pre-render");
+        return;
+      }
+      const step1Time = performance.now() - step1Start;
+      console.log(
+        `✅ Pre-render Step 1 - Element found: ${step1Time.toFixed(2)}ms`
+      );
+
+      // Step 2: Update count and save file
+      const step2Start = performance.now();
       const slipNo = updateCount();
       await saveFile(slipNo);
-      await document.fonts.ready;
+      const step2Time = performance.now() - step2Start;
+      console.log(
+        `✅ Pre-render Step 2 - Count update & file save: ${step2Time.toFixed(
+          2
+        )}ms`
+      );
 
-      // Create temporary style fix for Tailwind CSS text shifting issue
+      // Step 3: Wait for fonts
+      const step3Start = performance.now();
+      await document.fonts.ready;
+      const step3Time = performance.now() - step3Start;
+      console.log(
+        `✅ Pre-render Step 3 - Fonts ready: ${step3Time.toFixed(2)}ms`
+      );
+
+      // Step 4: Create styles
+      const step4Start = performance.now();
       const style = document.createElement("style");
       document.head.appendChild(style);
       style.sheet?.insertRule(
@@ -565,15 +593,25 @@ export default function MainContextProvider({
       style.sheet?.insertRule(
         "body > div:last-child * { line-height: normal; }"
       );
+      const step4Time = performance.now() - step4Start;
+      console.log(
+        `✅ Pre-render Step 4 - Styles created: ${step4Time.toFixed(2)}ms`
+      );
 
-      // Clone the element
+      // Step 5: Clone element
+      const step5Start = performance.now();
       const copiedPricingTableElmt = pricingTableElmt.cloneNode(
         true
       ) as HTMLElement;
+      const step5Time = performance.now() - step5Start;
+      console.log(
+        `✅ Pre-render Step 5 - Element cloned: ${step5Time.toFixed(2)}ms`
+      );
 
-      // Create wrapper
+      // Step 6: Create wrapper
+      const step6Start = performance.now();
       const wrapper = document.createElement("div");
-      wrapper.style.width = "303.5px";
+      wrapper.style.width = "288px";
       wrapper.style.height = "787px";
       wrapper.style.position = "fixed";
       wrapper.style.right = "100%";
@@ -590,56 +628,301 @@ export default function MainContextProvider({
 
       wrapper.appendChild(copiedPricingTableElmt);
       document.body.appendChild(wrapper);
+      const step6Time = performance.now() - step6Start;
+      console.log(
+        `✅ Pre-render Step 6 - Wrapper created & appended: ${step6Time.toFixed(
+          2
+        )}ms`
+      );
 
-      // Small delay for layout stabilization
+      // Step 7: Layout stabilization delay
+      const step7Start = performance.now();
       await new Promise((resolve) => setTimeout(resolve, 100));
+      const step7Time = performance.now() - step7Start;
+      console.log(
+        `✅ Pre-render Step 7 - Layout stabilization: ${step7Time.toFixed(2)}ms`
+      );
 
-      // Render to canvas
+      // Step 8: Render to canvas (this is usually the slowest part)
+      const step8Start = performance.now();
+      console.log("🔄 Starting pre-render html2canvas rendering...");
       const canvas = await html2canvas(wrapper, {
-        width: 303.5,
+        width: 288,
         height: 787,
-        windowWidth: 303.5,
+        windowWidth: 288,
         windowHeight: 787,
         scale: 2,
         useCORS: true,
-        // letterRendering: true,
         allowTaint: true,
       });
+      const step8Time = performance.now() - step8Start;
+      console.log(
+        `✅ Pre-render Step 8 - Canvas rendering: ${step8Time.toFixed(2)}ms`
+      );
 
-      // Cleanup
+      // Step 9: Cleanup
+      const step9Start = performance.now();
       wrapper.remove();
-      style.remove(); // Remove the temporary style fix
+      style.remove();
+      const step9Time = performance.now() - step9Start;
+      console.log(`✅ Pre-render Step 9 - Cleanup: ${step9Time.toFixed(2)}ms`);
 
+      // Store pre-rendered canvas and generate ID
+      const id: string = uuidv4();
+      setPreRenderedCanvas(canvas);
+      setPreRenderedId(id);
+
+      const totalPreRenderTime = performance.now() - step1Start;
+      console.log(
+        `🎉 Pre-render completed in ${totalPreRenderTime.toFixed(2)}ms`
+      );
+      console.log(`📊 Pre-render breakdown:`);
+      console.log(
+        `   - Setup (steps 1-7): ${(
+          step1Time +
+          step2Time +
+          step3Time +
+          step4Time +
+          step5Time +
+          step6Time +
+          step7Time
+        ).toFixed(2)}ms`
+      );
+      console.log(
+        `   - Rendering (step 8): ${step8Time.toFixed(2)}ms (${(
+          (step8Time / totalPreRenderTime) *
+          100
+        ).toFixed(1)}%)`
+      );
+      console.log(`   - Cleanup (step 9): ${step9Time.toFixed(2)}ms`);
+    } catch (err) {
+      console.log("❌ Pre-render failed:", err);
+    } finally {
+      setIsPreRendering(false);
+    }
+  };
+
+  // Modified handlePrint that only does final steps
+  const handlePrint = async () => {
+    // Prevent multiple print executions
+    if (hasPrinted) {
+      console.log("🔄 Print already completed, skipping...");
+      return;
+    }
+
+    const startTime = performance.now();
+    console.log("🖨️  Starting print process (final steps only)...");
+
+    wsRef.current?.send(JSON.stringify({ event: SocketEventEnum.PRINTING }));
+
+    try {
+      if (!preRenderedCanvas || !preRenderedId) {
+        console.log(
+          "❌ No pre-rendered content available, falling back to full render..."
+        );
+        // Fallback to original implementation
+        await handlePrintFull();
+        setHasPrinted(true);
+        return;
+      }
+
+      // Step 10: Convert to data URL (fast since canvas is ready)
+      const step10Start = performance.now();
+      const dataURL = preRenderedCanvas.toDataURL("image/bmp");
+      const step10Time = performance.now() - step10Start;
+      console.log(
+        `✅ Step 10 - Data URL conversion: ${step10Time.toFixed(2)}ms`
+      );
+
+      // Step 11: Download
+      const step11Start = performance.now();
+      downloadjs(dataURL, `${preRenderedId}.bmp`, "image/bmp");
+      const step11Time = performance.now() - step11Start;
+      console.log(
+        `✅ Step 11 - Download initiated: ${step11Time.toFixed(2)}ms`
+      );
+
+      // Total time for final steps
+      const totalTime = performance.now() - startTime;
+      console.log(
+        `🎉 Print process completed in ${totalTime.toFixed(
+          2
+        )}ms (using pre-rendered content)`
+      );
+      console.log(`📊 Final steps breakdown:`);
+      console.log(`   - Data URL conversion: ${step10Time.toFixed(2)}ms`);
+      console.log(`   - Download: ${step11Time.toFixed(2)}ms`);
+
+      // Clear pre-rendered content and mark as printed
+      setPreRenderedCanvas(null);
+      setPreRenderedId(null);
+      setHasPrinted(true);
+    } catch (err) {
+      const errorTime = performance.now() - startTime;
+      console.log(`❌ Print failed after ${errorTime.toFixed(2)}ms:`, err);
+    }
+  };
+
+  // Original handlePrint implementation (fallback)
+  const handlePrintFull = async () => {
+    const startTime = performance.now();
+    console.log("🖨️  Starting full print process (fallback)...");
+
+    try {
+      // Step 1: Find element
+      const step1Start = performance.now();
+      const pricingTableElmt = document.querySelector<HTMLElement>("#slip-pdf");
+      if (!pricingTableElmt) {
+        console.log("❌ Element #slip-pdf not found");
+        return;
+      }
+      const step1Time = performance.now() - step1Start;
+      console.log(`✅ Step 1 - Element found: ${step1Time.toFixed(2)}ms`);
+
+      // Step 2: Update count and save file
+      const step2Start = performance.now();
+      const slipNo = updateCount();
+      await saveFile(slipNo);
+      const step2Time = performance.now() - step2Start;
+      console.log(
+        `✅ Step 2 - Count update & file save: ${step2Time.toFixed(2)}ms`
+      );
+
+      // Step 3: Wait for fonts
+      const step3Start = performance.now();
+      await document.fonts.ready;
+      const step3Time = performance.now() - step3Start;
+      console.log(`✅ Step 3 - Fonts ready: ${step3Time.toFixed(2)}ms`);
+
+      // Step 4: Create styles
+      const step4Start = performance.now();
+      const style = document.createElement("style");
+      document.head.appendChild(style);
+      style.sheet?.insertRule(
+        "body > div:last-child img { display: inline-block; }"
+      );
+      style.sheet?.insertRule(
+        "body > div:last-child * { line-height: normal; }"
+      );
+      const step4Time = performance.now() - step4Start;
+      console.log(`✅ Step 4 - Styles created: ${step4Time.toFixed(2)}ms`);
+
+      // Step 5: Clone element
+      const step5Start = performance.now();
+      const copiedPricingTableElmt = pricingTableElmt.cloneNode(
+        true
+      ) as HTMLElement;
+      const step5Time = performance.now() - step5Start;
+      console.log(`✅ Step 5 - Element cloned: ${step5Time.toFixed(2)}ms`);
+
+      // Step 6: Create wrapper
+      const step6Start = performance.now();
+      const wrapper = document.createElement("div");
+      wrapper.style.width = "288px";
+      wrapper.style.height = "787px";
+      wrapper.style.position = "fixed";
+      wrapper.style.right = "100%";
+      wrapper.style.top = "0";
+      wrapper.style.overflow = "hidden";
+      wrapper.style.background = "#fff";
+      wrapper.style.margin = "0";
+      wrapper.style.padding = "0";
+
+      copiedPricingTableElmt.style.width = "100%";
+      copiedPricingTableElmt.style.height = "100%";
+      copiedPricingTableElmt.style.margin = "0";
+      copiedPricingTableElmt.style.padding = "0";
+
+      wrapper.appendChild(copiedPricingTableElmt);
+      document.body.appendChild(wrapper);
+      const step6Time = performance.now() - step6Start;
+      console.log(
+        `✅ Step 6 - Wrapper created & appended: ${step6Time.toFixed(2)}ms`
+      );
+
+      // Step 7: Layout stabilization delay
+      const step7Start = performance.now();
+      await new Promise((resolve) => setTimeout(resolve, 100));
+      const step7Time = performance.now() - step7Start;
+      console.log(
+        `✅ Step 7 - Layout stabilization: ${step7Time.toFixed(2)}ms`
+      );
+
+      // Step 8: Render to canvas (this is usually the slowest part)
+      const step8Start = performance.now();
+      console.log("🔄 Starting html2canvas rendering...");
+      const canvas = await html2canvas(wrapper, {
+        width: 288,
+        height: 787,
+        windowWidth: 288,
+        windowHeight: 787,
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+      });
+      const step8Time = performance.now() - step8Start;
+      console.log(`✅ Step 8 - Canvas rendering: ${step8Time.toFixed(2)}ms`);
+
+      // Step 9: Cleanup
+      const step9Start = performance.now();
+      wrapper.remove();
+      style.remove();
+      const step9Time = performance.now() - step9Start;
+      console.log(`✅ Step 9 - Cleanup: ${step9Time.toFixed(2)}ms`);
+
+      // Step 10: Generate ID and convert to data URL
+      const step10Start = performance.now();
       const id: string = uuidv4();
       const dataURL = canvas.toDataURL("image/bmp");
+      const step10Time = performance.now() - step10Start;
+      console.log(
+        `✅ Step 10 - ID generation & data URL: ${step10Time.toFixed(2)}ms`
+      );
+
+      // Step 11: Download
+      const step11Start = performance.now();
       downloadjs(dataURL, `${id}.bmp`, "image/bmp");
+      const step11Time = performance.now() - step11Start;
+      console.log(
+        `✅ Step 11 - Download initiated: ${step11Time.toFixed(2)}ms`
+      );
 
-      // Delay to show splash and call backend
-      setTimeout(async () => {
-        setShowSplash(true);
-        await fetch("/api/print", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            exePath: process.env.NEXT_PUBLIC_SCRIPT_PATH as string,
-            bmpPath: `${
-              process.env.NEXT_PUBLIC_DOWNLOAD_PATH as string
-            }${id}.bmp`,
-          }),
-        });
-      }, 3000);
-
-      // Reset app after another delay
-      setTimeout(() => {
-        handleReset();
-      }, 6000);
+      // Total time
+      const totalTime = performance.now() - startTime;
+      console.log(
+        `🎉 Full print process completed in ${totalTime.toFixed(2)}ms`
+      );
+      console.log(`📊 Performance breakdown:`);
+      console.log(
+        `   - Setup (steps 1-7): ${(
+          step1Time +
+          step2Time +
+          step3Time +
+          step4Time +
+          step5Time +
+          step6Time +
+          step7Time
+        ).toFixed(2)}ms`
+      );
+      console.log(
+        `   - Rendering (step 8): ${step8Time.toFixed(2)}ms (${(
+          (step8Time / totalTime) *
+          100
+        ).toFixed(1)}%)`
+      );
+      console.log(
+        `   - Finalization (steps 9-11): ${(
+          step9Time +
+          step10Time +
+          step11Time
+        ).toFixed(2)}ms`
+      );
     } catch (err) {
-      console.log("Failed to print", err);
+      const errorTime = performance.now() - startTime;
+      console.log(`❌ Full print failed after ${errorTime.toFixed(2)}ms:`, err);
     }
-    // } finally {
-    //   setIsPrinting(false);
-    // }
   };
+
   const handleBack = () => {
     setBackHandler(true);
     if (selectedQuestion?.id === "q1") {
@@ -718,6 +1001,7 @@ export default function MainContextProvider({
     setSelectedHomePageTab,
     printSlipRef,
     handlePrint,
+    preRenderPrintContent,
     setAnswers,
     answers,
     removeOption,
@@ -727,6 +1011,7 @@ export default function MainContextProvider({
     setQuestionsLength,
     isPrinting,
     setIsPrinting,
+    handleReset,
   };
   return <MainContext.Provider value={values}>{children}</MainContext.Provider>;
 }
