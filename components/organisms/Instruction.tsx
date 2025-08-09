@@ -28,7 +28,7 @@ const Instruction = () => {
           >
             <div className="px-4 py-6">
               <Text
-                title={"Complete The Assesment."}
+                title={"Complete The Assessment."}
                 fontSize="text-4xl"
                 fontWeight="font-medium leading-10"
                 textColor="text-white"
@@ -130,7 +130,7 @@ const Instruction = () => {
           <div className="flex items-center gap-24">
             <DotComponent total={5} answered={-1} />
             <Text
-              title="Trial Assesment"
+              title="Trial Assessment"
               fontSize="text-sm"
               fontWeight="font-bold"
               textColor="text-white"

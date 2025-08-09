@@ -145,7 +145,7 @@ export default function HomePage() {
         <div className="w-full h-10  mt-2 py-8 px-0 flex items-center justify-between">
           <DotComponent total={5} answered={total} />
           <Text
-            title="Trial Assesment"
+            title="Trial Assessment"
             fontSize="text-sm"
             fontWeight="font-medium"
             textColor="text-white"

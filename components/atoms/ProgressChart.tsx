@@ -62,7 +62,7 @@ const ProgressChart = ({
             alignItems: "center",
           }}
         >
-          <Text title="Trial Assesment" className="uppercase mb-4 font-bold" />
+          <Text title="Trial Assessment" className="uppercase mb-4 font-bold" />
           <CircularProgressbar
             value={value}
             text={`${Math.round(value)}%`}

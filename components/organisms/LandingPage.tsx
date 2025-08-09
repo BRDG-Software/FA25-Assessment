@@ -105,7 +105,7 @@ const LandingPage = ({ setSelectedTab }: propsType) => {
             //  color={`${splashEffect && "black"}`}
           />
           <Text
-            title="TRIAL ASSESTMENT"
+            title="TRIAL ASSESSMENT"
             fontSize="text-lg"
             fontWeight="font-bold"
             // textColor={`${splashEffect && "text-black"}`}
