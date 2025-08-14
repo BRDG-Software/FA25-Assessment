@@ -86,14 +86,30 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                 CALIBRATION COMPLETE
               </p>
             </div>
-            {/* graph */}
+            {/* Shoes Icons */}
             <div className="flex items-center justify-center mb-4 mt-[-10px]">
               {shoeName === shoeEnum.vomero ? (
-                <VomeroIcon />
+                <img
+                  src="/assets/icons/vomero-svg-slip.svg"
+                  alt="vomero Icon"
+                  width={121}
+                  height={152}
+                />
               ) : shoeName === shoeEnum.pegasus ? (
-                <PegasusSvg />
+                // <PegasusSvg />
+                <img
+                  src="/assets/icons/pegasus-svg-slip.svg"
+                  alt="Pegasus Icon"
+                  width={121}
+                  height={152}
+                />
               ) : (
-                <StructureIcon />
+                <img
+                  src="/assets/icons/structure-svg-slip.svg"
+                  alt="structure Icon"
+                  width={201}
+                  height={152}
+                />
               )}
             </div>
             {/* result bar */}

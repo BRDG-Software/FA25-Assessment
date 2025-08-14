@@ -68,6 +68,7 @@ export const MainContext = createContext<IMainContext>({
   isPrinting: false,
   setIsPrinting: () => {},
   handleReset: () => {},
+  preRenderPrintContent: async () => {},
 });
 export const useMainContext = () => useContext(MainContext);
 
