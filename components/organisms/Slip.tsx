@@ -92,23 +92,23 @@ export default function Slip({ shoeName, progressChartReading }: Props) {
                 <img
                   src="/assets/icons/vomero-svg-slip.svg"
                   alt="vomero Icon"
-                  width={121}
-                  height={152}
+                  width={159}
+                  height={200}
                 />
               ) : shoeName === shoeEnum.pegasus ? (
                 // <PegasusSvg />
                 <img
                   src="/assets/icons/pegasus-svg-slip.svg"
                   alt="Pegasus Icon"
-                  width={121}
-                  height={152}
+                  width={159}
+                  height={200}
                 />
               ) : (
                 <img
                   src="/assets/icons/structure-svg-slip.svg"
                   alt="structure Icon"
-                  width={201}
-                  height={152}
+                  width={196}
+                  height={200}
                 />
               )}
             </div>
