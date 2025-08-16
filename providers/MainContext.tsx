@@ -738,6 +738,21 @@ export default function MainContextProvider({
       // Step 11: Download
       const step11Start = performance.now();
       downloadjs(dataURL, `${preRenderedId}.bmp`, "image/bmp");
+
+      // Delay to show splash and call backend
+      setTimeout(async () => {
+        await fetch("/api/print", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            exePath: process.env.NEXT_PUBLIC_SCRIPT_PATH as string,
+            bmpPath: `${
+              process.env.NEXT_PUBLIC_DOWNLOAD_PATH as string
+            }${preRenderedId}.bmp`,
+          }),
+        });
+      }, 2000);
+
       const step11Time = performance.now() - step11Start;
       console.log(
         `✅ Step 11 - Download initiated: ${step11Time.toFixed(2)}ms`
